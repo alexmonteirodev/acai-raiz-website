@@ -1,0 +1,17 @@
+:root{
+    --roxo: #551934; /*#A14686*/
+    --verde: #94C105;
+    --marrom: #6D5C42;
+    --verde-escuro: #039330;
+    --branco: #F0F0F0;
+}
+body{
+    background-color: var(--branco);
+}
+nav{
+    background-color: var(--roxo);
+}
+nav a{
+    color: var(--branco);
+}
+
