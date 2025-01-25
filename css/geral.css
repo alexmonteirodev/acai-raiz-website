@@ -11,10 +11,9 @@ nav{
     align-items: center;
     justify-content: center;
     gap: 20rem;
-    height: 15vh;
 }
 #logo{
-    width: 90px;
+    width: 85px;
     height: auto;
 }
 .links{
@@ -29,7 +28,7 @@ nav a:hover{
     color: var(--cinza);
 }
 .svg-imgs{
-    width: 20px;
+    width: 25px;
     height: auto;
 }
 /* sections */
@@ -38,7 +37,7 @@ nav a:hover{
     margin-right: 15rem;
     display: flex;
     justify-content: center;
-    height: 70vh;
+    height: 90vh;
 }
 /* apresentação - section1 */
 #container-setcion{
@@ -46,15 +45,28 @@ nav a:hover{
     align-items: center;
     gap: 5rem;
 }
+#container-setcion img{
+    width: 500px;
+    height: auto;
+}
+#section1-text{
+    width: 700px;
+}
+#container-setcion h1{
+    color: var(--roxo);
+    font-size: 3.5rem;
+}
 #container-setcion p{
-   width: 350px;
+   color: var(--roxo);
+
 }
 #container-setcion button{
+    font-size: 1rem;
     border-radius: 5px;
     border: 2px solid var(--branco);
     background-color: var(--roxo);
     color: var(--branco);
-    padding: 10px;
+    padding: 13px 23px 13px 23px;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -73,6 +85,10 @@ nav a:hover{
     align-items: center;
     justify-content: center;
 }
+.container-main-section2 h2{
+    color: var(--roxo);
+    font-size: 3rem;
+}
 .div-main-section2{
     display: flex;
     flex-wrap: wrap;
@@ -84,11 +100,49 @@ nav a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 40px;
     border: 2px solid var(--roxo);
     border-radius: 20px;
     width: 400px;
     height: 250px;
+    background-color: var(--roxo);
+}
+.containers-section2 img{
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid var(--branco);
+    box-shadow: 0px 0px 2px 0px white;
+}
+.produto-text{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 45px;
+}
+.produto-p{
+    color: var(--branco);
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.containers-section2 a{
+    color: var(--branco);
+}
+.saiba-mais-produtos {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: gap 0.5s ease;
+    width: 120px;
+}
+.saiba-mais-produtos p:last-child {
+    transition: transform 0.5s ease; 
+}
+.saiba-mais-produtos:hover {
+    gap: 5px; 
+}
+.saiba-mais-produtos:hover p:last-child {
+    transform: translateX(10px);
 }
 
 
