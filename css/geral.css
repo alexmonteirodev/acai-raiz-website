@@ -33,11 +33,11 @@ nav a:hover{
 }
 /* sections */
 .sections{
-    margin-left: 15rem;
-    margin-right: 15rem;
+    /* margin-left: 15rem;
+    margin-right: 15rem; */
     display: flex;
     justify-content: center;
-    height: 90vh;
+    /* height: 90vh; */
 }
 /* apresentação - section1 */
 #container-setcion{
@@ -84,6 +84,7 @@ nav a:hover{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    gap: 3rem;
 }
 .container-main-section2 h2{
     color: var(--roxo);
@@ -136,17 +137,56 @@ nav a:hover{
     width: 120px;
 }
 .saiba-mais-produtos p:last-child {
-    transition: transform 0.5s ease; 
+    transition: transform 0.5s ease;
 }
 .saiba-mais-produtos:hover {
-    gap: 5px; 
+    gap: 5px;
 }
 .saiba-mais-produtos:hover p:last-child {
     transform: translateX(10px);
 }
-
-
-
+/* section 3 - instagram */
+#section3{
+    background-image: linear-gradient(45deg, #3F0F9A, #8E50CD);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 3rem;
+}
+#section3 h2{
+    color: var(--branco);
+    font-size: 3rem;
+}
+.instagram-contents{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.imagem-quadrada-insta img{
+    width: 250px;
+    height: 250px;
+    border-radius: 3px;
+    transition: ease 0.3s;
+    box-shadow: none;
+}
+.imagem-quadrada-insta img:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.59);
+}
+.imagem-retangular-insta img{
+    width: 450px;
+    height: 250px;
+    border-radius: 3px;
+    transition: ease 0.3s;
+    box-shadow: none;
+}
+.imagem-retangular-insta img:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.59);
+}
 
 
 
