@@ -23,13 +23,18 @@ nav{
 nav a{
     text-decoration: none;
     font-size: 1.1em;
+    border-bottom: 2px solid var(--roxo);
+    transition: transform 0.3s ease;
 }
 nav a:hover{
-    color: var(--cinza);
+    border-bottom: 2px solid white;
 }
 .svg-imgs{
     width: 25px;
     height: auto;
+}
+.svg-imgs-a:hover{
+    border-bottom: none;
 }
 /* sections */
 .sections{
@@ -37,9 +42,12 @@ nav a:hover{
     margin-right: 15rem; */
     display: flex;
     justify-content: center;
-    /* height: 90vh; */
+    height: 100vh;
 }
 /* apresentação - section1 */
+#section1{
+    height: 90vh;
+}
 #container-setcion{
     display: flex;
     align-items: center;
@@ -106,7 +114,7 @@ nav a:hover{
     border-radius: 20px;
     width: 400px;
     height: 250px;
-    background-color: var(--roxo);
+    background-image: linear-gradient(45deg, #3F0F9A, #8E50CD);
 }
 .containers-section2 img{
     width: 150px;
@@ -154,7 +162,7 @@ nav a:hover{
     justify-content: center;
     gap: 3rem;
     padding-bottom: 3rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 #section3 h2{
     color: var(--branco);
@@ -166,8 +174,8 @@ nav a:hover{
     gap: 3rem;
 }
 .imagem-quadrada-insta img{
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 230px;
     border-radius: 3px;
     transition: ease 0.3s;
     box-shadow: none;
@@ -177,8 +185,8 @@ nav a:hover{
     box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.59);
 }
 .imagem-retangular-insta img{
-    width: 450px;
-    height: 250px;
+    width: 430px;
+    height: 230px;
     border-radius: 3px;
     transition: ease 0.3s;
     box-shadow: none;
