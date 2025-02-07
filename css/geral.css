@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playwrite+IN:wght@100..400&family=Poppins&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
 body{
     margin:0px;
     padding: 0px;
-    font-family: "Noto Serif", serif;
+    font-family: Poppins, "Noto Serif", serif;
 }
 /* header */
 nav{
@@ -11,6 +16,7 @@ nav{
     align-items: center;
     justify-content: center;
     gap: 20rem;
+    background-color: var(--roxo);
 }
 #logo{
     width: 85px;
@@ -23,62 +29,28 @@ nav{
 nav a{
     text-decoration: none;
     font-size: 1.1em;
-    border-bottom: 2px solid var(--roxo);
+    border-bottom: 2.5px solid var(--roxo);
     transition: transform 0.3s ease;
+    color: var(--branco);
 }
 nav a:hover{
-    border-bottom: 2px solid white;
+    border-bottom: 2.5px solid var(--branco);
 }
-.svg-imgs{
-    width: 25px;
-    height: auto;
-}
-.svg-imgs-a:hover{
-    border-bottom: none;
-}
-/* sections */
-.sections{
-    /* margin-left: 15rem;
-    margin-right: 15rem; */
-    /* display: flex;
-    justify-content: center;
-    height: 100vh; */
-}
-/* apresentação - section1 */
-#section1{
-    height: 90vh;
-}
-#container-setcion{
-    display: flex;
-    align-items: center;
-    gap: 5rem;
-}
-#container-setcion img{
-    width: 500px;
-    height: auto;
-}
-#section1-text{
-    width: 700px;
-}
-#container-setcion h1{
-    color: var(--roxo);
-    font-size: 3.5rem;
-}
-#container-setcion p{
-   color: var(--roxo);
-
-}
-#container-setcion button{
+.nav-button{
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 20px;
     border: 2px solid var(--branco);
-    background-color: var(--roxo);
-    color: var(--branco);
-    padding: 13px 23px 13px 23px;
+    background-color: var(--branco);
+    color: var(--roxo);
+    padding: 10px 20px 10px 20px;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
-#container-setcion button:hover{
+.nav-button:hover{
     background-color: var(--branco);
     color: var(--roxo);
     border: 2px solid var(--roxo);
@@ -86,94 +58,113 @@ nav a:hover{
     font-style: italic;
     transform: scale(1.1);
 }
-/* produtos - section 2
-.container-main-section2{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
+.nav-button img{
+    height: 20px;
+    width: 20px;
 }
-.container-main-section2 h2{
-    color: var(--roxo);
-    font-size: 3rem;
-}
-.div-main-section2{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
-.containers-section2{
+/* sections */
+.sections{
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    border: 2px solid var(--roxo);
-    border-radius: 20px;
-    width: 400px;
-    height: 250px;
-    background-image: linear-gradient(45deg, #3F0F9A, #8E50CD);
-}
-.containers-section2 img{
-    width: 150px;
-    border-radius: 50%;
-    border: 2px solid var(--branco);
-    box-shadow: 0px 0px 2px 0px white;
-}
-.produto-text{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 45px;
-}
-.produto-p{
-    color: var(--branco);
-    font-weight: bold;
-    font-size: 1.8rem;
-}
-.containers-section2 a{
-    color: var(--branco);
-}
-.saiba-mais-produtos {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: gap 0.5s ease;
-    width: 120px;
-}
-.saiba-mais-produtos p:last-child {
-    transition: transform 0.5s ease;
-}
-.saiba-mais-produtos:hover {
-    gap: 5px;
-}
-.saiba-mais-produtos:hover p:last-child {
-    transform: translateX(10px);
-} */
 
+}
+/* apresentação - section1 */
+#container-setcion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+#container-setcion img{
+    width: 500px;
+    height: auto;
+}
+.botoes-section1{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+#section1-text h1{
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    width: 500px;
+}
+#section1-text h1 strong{
+    color: var(--roxo2);
+}
+#section1-text p{
+    color: var(--roxo);
+}
+.botoes-section1 a{
+    text-decoration: none;
+}
+.ver-produtos-botao{
+    background-color: var(--roxo2);
+    color: var(--branco);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.211);
+}
+.contato-telefone-section1{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.5rem;
+    background-color: var(--branco);
+    padding: 8px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.211);
+
+}
+.svg-telefone{
+    height: 20px !important; 
+    width: 20px !important;
+    background-color: var(--roxo2);
+    padding: 5px;
+    border-radius: 10px;
+}
+#redes-sociais-div{
+    display: flex;
+    align-items: center;
+    margin-top: 1.3rem;
+    gap: 1rem;
+}
+.redes-sociais{
+    height: 25px !important;
+    width: 25px !important;
+    background-color: var(--branco);
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.211);
+}
+/* produtos - section 2 */
 #section2{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.div-produtos-text h2{
-    text-align: center;
-    color: var(--roxo2);
-    font-size: 1.4rem;
-
-}
-.div-produtos-text p{
-    font-weight: bold;
-    font-size: 1.5rem;
-}
 .div-produtos{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
+}
+.div-produtos-text{
+    margin-bottom: 3rem;
+}
+.div-produtos-text h2{
+    text-align: center;
+    color: var(--roxo2);
+    font-size: 1.2rem;
+}
+.div-produtos-text p{
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 .produtos{
     border-radius: 20px;
@@ -186,11 +177,11 @@ nav a:hover{
     justify-content: flex-end;
 }
 .coracao{
-    height: 25px;
-    width: 25px;
-    margin-right: -10px;
-    margin-top: -10px;
-    padding: 20px;
+    height: 20px;
+    width: 20px;
+    margin-right: -5px;
+    margin-top: -5px;
+    padding: 15px;
     background-color: var(--roxo2);
     border-radius: 50px;
 }
@@ -212,21 +203,40 @@ nav a:hover{
     color: var(--cinza);
     margin: 0px;
 }
-.stars{
+.saiba-mais-produtos {
+    text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.2rem;
-}
-.stars p{
-    color: var(--cinza);
+    gap: 5px;
+    transition: gap 0.5s ease;
+    width: 120px;
     font-size: 0.8rem;
+    text-align: center;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+}
+.saiba-mais-produtos p:last-child {
+    transition: transform 0.5s ease;
+}
+.saiba-mais-produtos:hover {
+    gap: 5px;
+}
+.saiba-mais-produtos:hover p:last-child {
+    transform: translateX(10px);
+}
+.div-saiba-mais{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.8rem;
 }
 .preco-div{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.4rem;
+    margin-bottom: 0.5rem;
 }
 .preco-div p{
     font-weight: bold;
@@ -245,19 +255,6 @@ nav a:hover{
 .svg-cesta:hover{
     transform: scale(1.2);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* section 3 - instagram */
 #section3{
     background-image: linear-gradient(45deg, #3F0F9A, #8E50CD);
