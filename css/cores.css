@@ -5,6 +5,7 @@
     --verde-escuro: #039330;
     --branco: #F0F0F0;
     --cinza: rgb(141, 125, 125);
+    --roxo2: #3F0F9A;
 }
 body{
     background-color: var(--branco);

@@ -40,9 +40,9 @@ nav a:hover{
 .sections{
     /* margin-left: 15rem;
     margin-right: 15rem; */
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 100vh; */
 }
 /* apresentação - section1 */
 #section1{
@@ -86,7 +86,7 @@ nav a:hover{
     font-style: italic;
     transform: scale(1.1);
 }
-/* produtos - section 2*/
+/* produtos - section 2
 .container-main-section2{
     display: flex;
     flex-wrap: wrap;
@@ -152,7 +152,112 @@ nav a:hover{
 }
 .saiba-mais-produtos:hover p:last-child {
     transform: translateX(10px);
+} */
+
+#section2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+.div-produtos-text h2{
+    text-align: center;
+    color: var(--roxo2);
+    font-size: 1.4rem;
+
+}
+.div-produtos-text p{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.div-produtos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.produtos{
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.211);
+    overflow: hidden; /* Esconde tudo que sai da div */
+    width: 300px;
+}
+.div-coracao{
+    display: flex;
+    justify-content: flex-end;
+}
+.coracao{
+    height: 25px;
+    width: 25px;
+    margin-right: -10px;
+    margin-top: -10px;
+    padding: 20px;
+    background-color: var(--roxo2);
+    border-radius: 50px;
+}
+.img-produto-div{
+    display: flex;
+    justify-content: center;
+}
+.img-protudo{
+    height: 150px;
+}
+.titulo-produto{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+.descricao-produto{
+    text-align: center;
+    color: var(--cinza);
+    margin: 0px;
+}
+.stars{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+.stars p{
+    color: var(--cinza);
+    font-size: 0.8rem;
+}
+.preco-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+.preco-div p{
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.svg-cesta{
+    height: 15px;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: var(--roxo2);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.211);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.svg-cesta:hover{
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* section 3 - instagram */
 #section3{
     background-image: linear-gradient(45deg, #3F0F9A, #8E50CD);
