@@ -29,20 +29,23 @@ nav{
 nav a{
     text-decoration: none;
     font-size: 1.1em;
-    border-bottom: 2.5px solid var(--roxo);
+    border-bottom: 2px solid var(--roxo);
     transition: transform 0.3s ease;
     color: var(--branco);
+    font-weight: 300;
 }
 nav a:hover{
-    border-bottom: 2.5px solid var(--branco);
+    border-bottom: 2px solid var(--branco);
+    color: var(--cinza);
+
 }
 .nav-button{
     font-size: 1rem;
-    border-radius: 20px;
+    border-radius: 15px;
     border: 2px solid var(--branco);
     background-color: var(--branco);
     color: var(--roxo);
-    padding: 10px 20px 10px 20px;
+    padding: 7px 15px 7px 15px;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
     font-weight: bold;
@@ -55,7 +58,6 @@ nav a:hover{
     color: var(--roxo);
     border: 2px solid var(--roxo);
     font-weight: bold;
-    font-style: italic;
     transform: scale(1.1);
 }
 .nav-button img{
@@ -108,6 +110,11 @@ nav a:hover{
     padding: 10px;
     border-radius: 15px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.211);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.ver-produtos-botao:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.486);
 }
 .contato-telefone-section1{
     display: flex;
@@ -118,7 +125,11 @@ nav a:hover{
     padding: 8px;
     border-radius: 15px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.211);
-
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.contato-telefone-section1:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.486);
 }
 .svg-telefone{
     height: 20px !important; 
@@ -140,6 +151,11 @@ nav a:hover{
     padding: 8px;
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.211);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.redes-sociais:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.486);
 }
 /* produtos - section 2 */
 #section2{
@@ -268,7 +284,8 @@ nav a:hover{
 }
 #section3 h2{
     color: var(--branco);
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: 500;
 }
 .instagram-contents{
     display: flex;
@@ -297,11 +314,74 @@ nav a:hover{
     transform: scale(1.1);
     box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.59);
 }
-
-
-
-
-
+/* section 4 - comentarios  */
+#section4{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+}
+#section4 h2{
+    color: var(--roxo2);
+    margin-bottom: 3rem;
+}
+/* .comentarios-container-geral{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.passa-comentarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(128, 128, 128, 0.203);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.setas{
+    width: 20px;
+    height: 20px;
+} */
+.comentarios-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.comentarios-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(128, 128, 128, 0.119);
+    padding: 25px;
+    border-radius: 5px;
+    scale: 0.8;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.128);
+    border: 1px solid rgba(128, 128, 128, 0.073);
+}
+.img-comentario{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.247);
+}
+.nome-pessoa-comentario{
+    font-style: italic;
+    color: gray;
+}
+.estrelas{
+    display: flex;
+}
+.estrelas img{
+    width: 20px;
+    height: 20px;
+}
+.comentario p{
+    text-align: center;
+    font-size: 1.2rem;
+}
 
 
 /* footer*/
