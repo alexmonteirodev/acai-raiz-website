@@ -383,8 +383,60 @@ nav a:hover{
     font-size: 1.2rem;
 }
 
-
 /* footer*/
 footer{
     text-align: center;
+    background-color: var(--roxo);
+}
+.divisao{
+    transform: rotate(180deg);
+    margin-top: -1px;
+}
+.mapa{
+    height: 300px;
+    width: 300px;
+}
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+    margin-bottom: 3rem;
+}
+.footer-contato-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.footer-contato-container h3{
+    text-align: left;
+    color: var(--branco);
+    font-size: 1.2rem;
+    font-weight: normal;
+    border-left: 2px solid var(--branco);
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.footer-contato-container p{
+    text-align: left;
+    color: var(--branco);
+    font-size: 1rem;
+}
+
+
+
+
+
+
+.copyright{
+    color: var(--branco);
+    padding-bottom: 5px;
+}
+.copyright a{
+    color: var(--branco);
+    cursor: pointer;
+    font-style: italic;
+    font-weight: lighter;
+    text-decoration: none;
 }
