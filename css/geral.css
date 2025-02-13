@@ -394,14 +394,15 @@ footer{
     margin-top: -1px;
 }
 .mapa{
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 400px;
+    border-radius: 3px;
 }
 .footer-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20rem;
+    gap: 15rem;
     margin-bottom: 3rem;
 }
 .footer-contato-container{
@@ -409,11 +410,12 @@ footer{
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    gap: 10px;
 }
 .footer-contato-container h3{
     text-align: left;
     color: var(--branco);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: normal;
     border-left: 2px solid var(--branco);
     padding-left: 10px;
@@ -422,7 +424,7 @@ footer{
 .footer-contato-container p{
     text-align: left;
     color: var(--branco);
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 .copyright{
     color: var(--branco);
@@ -434,4 +436,35 @@ footer{
     font-style: italic;
     font-weight: lighter;
     text-decoration: none;
+}
+/* horario funcionamento js  */
+[data-semana]::after{
+    display: inline-block;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #E54;
+    margin-left: 4px;
+    border: 2px solid black;
+}
+[data-semana].aberto::after{
+    background-color: #3F4;
+}
+.btc-preco{
+    background-color: #3F4;
+    padding: .2rem .5rem;
+    font-weight: bold;
+    border-radius: 2px;
+}
+/* animacao scroll lateral  */
+[data-anime="scroll"]{ 
+    /* não usou display:none pq se não o elemento seria adicinado na tela e ela daria um pulo, já com o trnasform o elemento já está na tela e por isso não pula, porque ele não é adicionado com o block*/
+    opacity: 0;
+    transform: translate3d(-30px,0,0);
+    transition: .3s;
+}
+[data-anime="scroll"].ativo{
+    opacity: 1; /* opacidade faz o elemento sumir e aparecer */
+    transform: translate3d(0,0,0); 
 }

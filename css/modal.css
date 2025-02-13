@@ -1,0 +1,78 @@
+.modal-container{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5); /* fundo transparente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000; /*pra ficar na frente de tudo no eixo z*/
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal-container.ativo{
+    display: flex;
+}
+.modal{
+    background-color: white;
+    padding: 40px;
+    border: 5px solid var(--roxo2);
+    box-shadow: 0 0 0  10px white;
+    position: relative;
+    min-width: 30vw; /*para dar uma largura min e ele não ficar grudado*/
+    min-height: 50vh; /*para dar uma largura min e ele não ficar grudado*/
+    border-radius: 5px;
+}
+
+@keyframes modal {
+    from{
+        opacity: 0;
+        transform: translate3d(0,-30px,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.ativo .modal{
+    animation: modal .3s forwards;
+}
+
+.fechar{
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+    background-color: var(--roxo2);
+    font-size: 1.2rem;
+    color: white;
+    font-family: 'IBM Plex Mono', monospace;
+    cursor: pointer;
+}
+.div-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.div-modal img{
+    max-width: 30vw;
+    max-height: 30vh;
+    margin-bottom: 0.5rem;
+}
+.div-modal h4{
+    margin-bottom: 1.2rem;
+    color: var(--roxo2);
+    font-size: 1.2rem;
+
+}
+.div-modal p{
+    max-width: 50vw;
+    text-align: center;
+    font-size: 1.2rem;
+}
