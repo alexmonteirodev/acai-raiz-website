@@ -206,7 +206,7 @@ nav a:hover{
     justify-content: center;
 }
 .img-protudo{
-    height: 150px;
+    height: 180px;
 }
 .titulo-produto{
     text-align: center;
@@ -286,6 +286,7 @@ nav a:hover{
     color: var(--branco);
     font-size: 2rem;
     font-weight: 500;
+    margin-top: 10px;
 }
 .instagram-contents{
     display: flex;
@@ -423,12 +424,6 @@ footer{
     color: var(--branco);
     font-size: 1rem;
 }
-
-
-
-
-
-
 .copyright{
     color: var(--branco);
     padding-bottom: 5px;
