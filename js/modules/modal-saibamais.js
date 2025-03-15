@@ -49,3 +49,35 @@ export default function initModal(params) {
     }
     
     //obs: poderia usar o toggle que add e remove a class para usar apenas duas funções e deixar o codigo menor. Assim, se otmimiza a função porque é menos linha de codigo pro js ler. (ao inves de usar abrirModal e fecharModal, poderia usar toggleModal e mudar o add do classlist para toggle)
+    //-------------------------------------------------------------------------------------------------------
+
+    // lógica dos produtos:
+
+    // const imgModal = document.querySelector('.div-modal img')
+    // const hModal = document.querySelector('.div-modal h4')
+    // const pModal = document.querySelector('.div-modal p')
+
+    // imgModal.src= "/imgs/cafe-de-acai-produto.png"
+    // hModal.innerHTML= 'teste'
+    // pModal.innerHTML= 'teste'
+
+    fetch('json/produtos.json')
+    .then( response=> response.json())
+    .then(produtos=> {
+        console.log(produtos[0].id) // teste
+        const imgModal = document.querySelector('.div-modal img')
+        const hModal = document.querySelector('.div-modal h4')
+        const pModal = document.querySelector('.div-modal p')
+
+        if (condition) {
+            imgModal.src= produtos[0].imagem
+            hModal.innerHTML= produtos[0].nome
+            pModal.innerHTML= produtos[0].descricao
+        } else if (condition) {
+            
+        } else if (condition) {
+            
+        } else {
+            
+        }
+    })
