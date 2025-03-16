@@ -17,6 +17,12 @@ nav{
     justify-content: center;
     gap: 20rem;
     background-color: var(--roxo);
+    padding-top: 10px;
+}
+.divisao0{
+    margin-top: -20px;
+    z-index: -1;
+    position: relative;
 }
 #logo{
     width: 85px;
