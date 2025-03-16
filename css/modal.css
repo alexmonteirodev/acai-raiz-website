@@ -19,7 +19,7 @@
     border: 5px solid var(--roxo2);
     box-shadow: 0 0 0  10px white;
     position: relative;
-    min-width: 30vw; /*para dar uma largura min e ele não ficar grudado*/
+    min-width: 50vw; /*para dar uma largura min e ele não ficar grudado*/
     min-height: 50vh; /*para dar uma largura min e ele não ficar grudado*/
     border-radius: 5px;
 }

@@ -68,16 +68,21 @@ export default function initModal(params) {
         const imgModal = document.querySelector('.div-modal img')
         const hModal = document.querySelector('.div-modal h4')
         const pModal = document.querySelector('.div-modal p')
+        const linksSaibaMais = document.querySelectorAll('[data-modal="abrir"]')
 
-        if (condition) {
-            imgModal.src= produtos[0].imagem
-            hModal.innerHTML= produtos[0].nome
-            pModal.innerHTML= produtos[0].descricao
-        } else if (condition) {
-            
-        } else if (condition) {
-            
-        } else {
-            
-        }
+
+
+        linksSaibaMais.forEach((link) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault()
+
+                const produtoSelecionado = produtos.find(produto => produto.id === link.id)
+
+                if (produtoSelecionado) {
+                    imgModal.src= produtoSelecionado.imagem
+                    hModal.innerHTML= produtoSelecionado.nome
+                    pModal.innerHTML= produtoSelecionado.descricao
+                }
+            })
+        })
     })

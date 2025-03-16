@@ -1,24 +1,24 @@
 [
     {
-        "id": "modal1",
+        "id": "produto1",
         "imagem": "/imgs/licor-png.png",
         "nome": "Licor",
         "descricao": "O LICOR - sabor autêntico do açaí puro, sem adição de ingredientes extras."
     },
     {
-        "id": "modal2",
+        "id": "produto2",
         "imagem": "/imgs/acai-produto.png",
         "nome": "Açaí",
         "descricao": " ACAI - perfeita do açaí com morangos frescos."
     },
     {
-        "id": "modal3",
+        "id": "produto3",
         "imagem": "/imgs/cafe-de-acai-produto.png",
         "nome": "Café de Açaí",
         "descricao": "CAFE DE ACAI - Açaí cremoso coberto com leite em pó e um toque especial de leite condensado."
     },
     {
-        "id": "modal4",
+        "id": "produto4",
         "imagem": "/imgs/cafe-de-acai-produto.png",
         "nome": "Blend de Açaí",
         "descricao": "BLEND - Uma opção saudável, sem açúcar e com whey protein."
