@@ -223,6 +223,59 @@
         </div>
     </section>
 
+    <section class="section-compras">
+        <div class="aba-compras">
+                <h5>Meu carrinho raiz</h5>
+            <div class="produto-compra">
+                <p>Polpa pura de Açaí 1L - <span class="titulo-produto">R$40,00</span></p>
+                <div class="number-input">
+                    <button onclick="decrement()">−</button>
+                    <input type="number" id="quantity" min="0" max="20" value="0">
+                    <button class="incremet-btn" onclick="increment()">+</button>
+                </div>
+            </div>
+            <div class="produto-compra">
+                <p>Café de Açaí 250g - <span class="titulo-produto">R$25,00</span></p>
+                <div class="number-input">
+                    <button onclick="decrement()">−</button>
+                    <input type="number" id="quantity" min="0" max="20" value="0">
+                    <button class="incremet-btn" onclick="increment()">+</button>
+                </div>
+            </div>
+            <div class="produto-compra">
+                <p>Licor de Açaí 250ml - <span class="titulo-produto">R$25,00</span></p>
+                <div class="number-input">
+                    <button onclick="decrement()">−</button>
+                    <input type="number" id="quantity" min="0" max="20" value="0">
+                    <button class="incremet-btn" onclick="increment()">+</button>
+                </div>
+            </div>
+            <div class="produto-compra">
+                <p>Blend de café de Açaí 250g - <span class="titulo-produto">R$25,00</span></p>
+                <div class="number-input">
+                    <button onclick="decrement()">−</button>
+                    <input type="number" id="quantity" min="0" max="20" value="0">
+                    <button class="incremet-btn" onclick="increment()">+</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="total-div">
+                <p>Total - <span class="titulo-produto">R$</span><span class="titulo-produto" id="valor-total">0,00</span></p>
+            </div>
+
+            <div class="btn-enviar">
+                <button>Enviar</button>
+            </div>
+
+            <div class="texto-explicativo-carrinho">
+                <p>* Seu pedido será enviado à nossa atendente, que entrará em contato via WhatsApp para os detalhes de pagamento e entrega.</p>
+                <p>Obrigado por escolher o Açaí Raiz!</p>
+            </div>
+        </div>
+    </section>
+
     <script type="module" src="js/script.js"></script>
 </body>
 </html>

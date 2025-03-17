@@ -9,3 +9,6 @@ initAnimacaoScroll()
 
 import initmodal from './modules/modal-saibamais.js'
 initmodal()
+
+import compras from './modules/carrinho-compras.js'
+compras()
