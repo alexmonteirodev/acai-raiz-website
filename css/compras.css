@@ -51,7 +51,15 @@
     display: flex;
     justify-content: space-between;
 }
-
+.produto-compra p{
+    border-left: 2px solid var(--roxo2);
+    padding-left: 10px;
+    font-size: 1.2rem;
+}
+.quantidade-produto{
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 0.9rem;
+}
 /* Para navegadores WebKit (Chrome, Safari, Edge) */
 input[type="number"]::-webkit-inner-spin-button, 
 input[type="number"]::-webkit-outer-spin-button {
@@ -113,7 +121,7 @@ input[type="number"] {
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
     font-weight: bold;
-    scale: 1.2;
+    scale: 1.3;
 }
 .btn-enviar button:hover{
     background-color: var(--branco);

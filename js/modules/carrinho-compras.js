@@ -1,5 +1,6 @@
 export default function compras(params) {
 
+// abrir modal de compras 
     const links = document.querySelectorAll('.link-compras')
     const linkBtnNav = document.querySelector('.nav-button')
     const sectionCompras = document.querySelector('.section-compras')
@@ -24,23 +25,19 @@ export default function compras(params) {
         if (e.target === this) 
             sectionCompras.classList.remove('ativo')
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // logica quantidade de produtos
+
+    
+
+
+
+
+
+
+
+
+
+
 
     // function increment() {
     //     let input = document.getElementById('quantity');

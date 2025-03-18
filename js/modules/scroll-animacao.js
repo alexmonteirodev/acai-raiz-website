@@ -1,7 +1,7 @@
 //animação ao scroll (ao scrolar  a pg, os elementos fazem animação para o lodo)
 export default function initAnimacaoScroll() {
     const sections = document.querySelectorAll('[data-anime="scroll"]')
-    const metadeTela = window.innerHeight * 0.75 //tamanho da tela (eixo y) * 60%
+    const metadeTela = window.innerHeight * 0.85 //tamanho da tela (eixo y) * 60%
 
     if (sections.length) { //comprova se tem esse elemento porque caso não tenha não faz sentido executar tudo isso
         window.addEventListener('scroll', animaScroll)

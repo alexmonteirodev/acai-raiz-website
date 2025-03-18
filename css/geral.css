@@ -62,7 +62,6 @@ nav a:hover{
 .nav-button:hover{
     background-color: var(--branco);
     color: var(--roxo);
-    border: 2px solid var(--roxo);
     font-weight: bold;
     transform: scale(1.1);
 }
@@ -296,7 +295,7 @@ nav a:hover{
     color: var(--branco);
     font-size: 2rem;
     font-weight: 500;
-    margin-top: 10px;
+    margin-top: 2rem;
 }
 .instagram-contents{
     display: flex;
