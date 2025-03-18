@@ -10,3 +10,43 @@ body{
     padding: 0px;
     font-family: Poppins, "Noto Serif", serif;
 }
+nav{
+    background-color: #370562;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+nav a{
+    color: white;
+    margin-left: 2rem;
+    font-size: 2rem;
+    border-right: 2px solid white;
+    padding-right: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+.img-div{
+    display: flex;
+    justify-content: center;
+}
+main img{
+    width: 500px;
+    height: 300px;
+    margin-top: 3rem;
+    border-radius: 5px;
+}
+.text-content{
+    margin-left: 2rem;
+    margin-top: 3rem;
+}
+h2{
+    border-left: 3px solid #370562;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+p{
+    text-align: justify;
+    width: 90vw;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
