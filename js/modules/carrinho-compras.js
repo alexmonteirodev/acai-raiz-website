@@ -1,8 +1,29 @@
 export default function compras(params) {
 
+    const links = document.querySelectorAll('.link-compras')
+    const linkBtnNav = document.querySelector('.nav-button')
+    const sectionCompras = document.querySelector('.section-compras')
 
+    links.forEach((link) => {
+        link.addEventListener('click', saibaMaisHandleClick)
+        function saibaMaisHandleClick(e) {
+            e.preventDefault()
+            sectionCompras.classList.add('ativo')
+        }
+    })
 
+    linkBtnNav.addEventListener('click', pecaAquiHandleClick)
+        function pecaAquiHandleClick(e) {
+            e.preventDefault()
+            sectionCompras.classList.add('ativo')
+        }
+    
 
+    sectionCompras.addEventListener('click', clickForaModal)
+    function clickForaModal(e) {
+        if (e.target === this) 
+            sectionCompras.classList.remove('ativo')
+    }
 
 
 

@@ -7,13 +7,27 @@
     left: 0;
     z-index: 2000;
     /* display: none; */
-    display: flex;
+    display: none;
     justify-content: flex-end;
 
 }
-/* .section-compras.ativo{
+.section-compras.ativo{
     display: flex;
-} */
+}
+@keyframes compras {
+    from{
+        opacity: 0;
+        transform: translate3d(50px,0,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.ativo .aba-compras{
+    animation: compras .7s forwards;
+}
 .aba-compras{
     background-color: white;
     border-left: 5px solid var(--roxo2);
@@ -99,6 +113,7 @@ input[type="number"] {
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
     font-weight: bold;
+    scale: 1.2;
 }
 .btn-enviar button:hover{
     background-color: var(--branco);
