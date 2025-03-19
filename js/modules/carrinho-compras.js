@@ -25,24 +25,78 @@ export default function compras(params) {
         if (e.target === this) 
             sectionCompras.classList.remove('ativo')
     }
-// logica quantidade de produtos
+// logica quantidade de produtos e soma total
 
+//         document.querySelectorAll('.produto-compra').forEach(produto => {
+//             const input = produto.querySelector('.quantity')
+//             const btnIncrement = produto.querySelector('.increment-btn')
+//             const btnDecrement = produto.querySelector('.btn-decrement')
+//             const preco = produto.querySelector('[data-preco]')
+//             const totalValue = document.querySelector('#valor-total')
+
+//             let total = 0
+
+//             btnIncrement.addEventListener('click', () => {   
+//                 if (Number(input.value) < Number(input.max)) {
+//                     input.value = Number(input.value) + 1;
+//                 }
+//                 let itemTotal = Number(input.value) * Number(preco.dataset.preco)
+//                 totalValue.innerHTML = total += itemTotal 
+
+//             });
+//             btnDecrement.addEventListener('click', () => {
+//                 if (Number(input.value) > Number(input.min)) {
+//                     input.value = Number(input.value) - 1;
+//                 }
+//             });
+//         });
+
+document.querySelectorAll('.produto-compra').forEach(produto => {
+    const input = produto.querySelector('.quantity');
+    const btnIncrement = produto.querySelector('.increment-btn');
+    const btnDecrement = produto.querySelector('.btn-decrement');
+    const preco = produto.querySelector('[data-preco]');
+    const totalValue = document.querySelector('#valor-total');
+
+    // Inicializa o valor total
+    let total = 0;
+
+    btnIncrement.addEventListener('click', () => {
+        if (Number(input.value) < Number(input.max)) {
+            input.value = Number(input.value) + 1;
+        }
+
+        // Calcula o total para esse item
+        let itemTotal = Number(input.value) * Number(preco.dataset.preco);
+
+        // Atualiza o total geral
+        total = 0;
         document.querySelectorAll('.produto-compra').forEach(produto => {
             const input = produto.querySelector('.quantity');
-            const btnIncrement = produto.querySelector('.increment-btn');
-            const btnDecrement = produto.querySelector('.btn-decrement');
-
-            btnIncrement.addEventListener('click', () => {   
-                if (Number(input.value) < Number(input.max)) {
-                    input.value = Number(input.value) + 1;
-                }
-                
-            });
-            btnDecrement.addEventListener('click', () => {
-                if (Number(input.value) > Number(input.min)) {
-                    input.value = Number(input.value) - 1;
-                }
-            });
+            const preco = produto.querySelector('[data-preco]');
+            total += Number(input.value) * Number(preco.dataset.preco);
         });
 
+        totalValue.innerHTML = `${total.toFixed(2)}`; // Exibe o total com 2 casas decimais
+    });
+
+    btnDecrement.addEventListener('click', () => {
+        if (Number(input.value) > Number(input.min)) {
+            input.value = Number(input.value) - 1;
+        }
+
+        // Recalcula o total
+        total = 0;
+        document.querySelectorAll('.produto-compra').forEach(produto => {
+            const input = produto.querySelector('.quantity');
+            const preco = produto.querySelector('[data-preco]');
+            total += Number(input.value) * Number(preco.dataset.preco);
+        });
+
+        totalValue.innerHTML = `${total.toFixed(2)}`; // Exibe o total atualizado
+    });
+});
+
 }
+
+
