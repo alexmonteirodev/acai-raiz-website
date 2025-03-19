@@ -30,14 +30,15 @@ nav a{
     justify-content: center;
 }
 main img{
-    width: 500px;
-    height: 300px;
+    width: 650px;
+    height: 400px;
     margin-top: 3rem;
     border-radius: 5px;
 }
 .text-content{
     margin-left: 2rem;
     margin-top: 3rem;
+    scale: 0.9;
 }
 h2{
     border-left: 3px solid #370562;

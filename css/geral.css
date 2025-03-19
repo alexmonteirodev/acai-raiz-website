@@ -18,15 +18,17 @@ nav{
     gap: 20rem;
     background-color: var(--roxo);
     padding-top: 10px;
+    height:100px;
 }
 .divisao0{
-    margin-top: -20px;
+    margin-top: -13px;
     z-index: -1;
     position: relative;
 }
 #logo{
-    width: 85px;
+    width: 110px;
     height: auto;
+    padding-top: 15px;
 }
 .links{
     display: flex;
