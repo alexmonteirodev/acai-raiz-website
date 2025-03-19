@@ -64,7 +64,7 @@ export default function initModal(params) {
     fetch('json/produtos.json')
     .then( response=> response.json())
     .then(produtos=> {
-        console.log(produtos[0].id) // teste
+        // console.log(produtos[0].id) // teste
         const imgModal = document.querySelector('.div-modal img')
         const hModal = document.querySelector('.div-modal h4')
         const pModal = document.querySelector('.div-modal p')
