@@ -15,12 +15,12 @@
         "id": "produto3",
         "imagem": "/imgs/cafe-de-acai-produto.png",
         "nome": "Café de Açaí",
-        "descricao": "CAFE DE ACAI - Açaí cremoso coberto com leite em pó e um toque especial de leite condensado."
+        "descricao": "O Café de Açaí possui muitos benefícios para a saúde, são eles: <br/> · Rico em vitaminas A, B1, B2, C, D, E, e K <br/> · Controle da Glicemia e Pressão Arterial <br/> · Regula o intestino, pois é rico em fibras e óleos essenciais <br/> · O café de açaí não contém glúten nem Cafeína"
     },
     {
         "id": "produto4",
         "imagem": "/imgs/cafe-de-acai-produto.png",
         "nome": "Blend de Açaí",
-        "descricao": "BLEND - Uma opção saudável, sem açúcar e com whey protein."
+        "descricao": "Mistura ideal, elaborada para a apreciação e benefícios do Café de Açaí. Grãos de café gourmet e café de açaí torrados e moídos. <br/> · Não contém glúten <br/> · Contém Cafeín"
     }
 ]

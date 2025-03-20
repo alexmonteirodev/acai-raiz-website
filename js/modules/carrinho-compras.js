@@ -97,6 +97,19 @@ document.querySelectorAll('.produto-compra').forEach(produto => {
     });
 });
 
+
+// logica botão enviar
+
+    const btnEnviar = document.querySelector('.btn-enviar button')
+    const telefone = "79991198907"
+    let mensagem = 'teste'
+
+    btnEnviar.addEventListener('click', handleClickEnviar)
+
+    // function handleClickEnviar(params) {
+    //     const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+    //     window.open(url, "_blank");
+    // }
 }
 
 

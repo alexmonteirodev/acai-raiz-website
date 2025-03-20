@@ -73,6 +73,7 @@
 }
 .div-modal p{
     max-width: 50vw;
-    text-align: center;
+    text-align: justify;
     font-size: 1.2rem;
+    line-height: 2.5rem
 }
