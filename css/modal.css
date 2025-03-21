@@ -14,7 +14,7 @@
     display: flex;
 }
 .modal{
-    background-color: white;
+    background-color: var(--branco);
     padding: 40px;
     border: 5px solid var(--roxo2);
     box-shadow: 0 0 0  10px white;

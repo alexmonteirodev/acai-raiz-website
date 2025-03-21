@@ -16,43 +16,40 @@ nav{
     align-items: center;
     justify-content: center;
     gap: 20rem;
-    background-color: var(--roxo);
+    background-color: var(--branco);
     padding-top: 10px;
-    height:100px;
-}
-.divisao0{
-    margin-top: -13px;
-    z-index: -1;
-    position: relative;
 }
 #logo{
-    width: 110px;
+    width: 100px;
     height: auto;
-    padding-top: 15px;
 }
 .links{
     display: flex;
     gap: 50px;
 }
-nav a{
+.links a{
     text-decoration: none;
     font-size: 1.1em;
-    border-bottom: 2px solid var(--roxo);
     transition: transform 0.3s ease;
-    color: var(--branco);
-    font-weight: 300;
-}
-nav a:hover{
-    border-bottom: 2px solid var(--branco);
+    border-bottom: 2.5px solid var(--branco);
     color: var(--cinza);
+    font-weight: bold;
+}
+.link-nav-ativo{
+    color: black;
+    border-bottom: 2.5px solid var(--roxo2);
+}
+.links a:hover{
+    border-bottom: 2.5px solid var(--roxo2);
+    color: black;
 
 }
 .nav-button{
     font-size: 1rem;
     border-radius: 15px;
     border: 2px solid var(--branco);
-    background-color: var(--branco);
-    color: var(--roxo);
+    background-color: var(--roxo2);
+    color: var(--branco);
     padding: 7px 15px 7px 15px;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -60,10 +57,11 @@ nav a:hover{
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    text-decoration: none;
 }
 .nav-button:hover{
-    background-color: var(--branco);
-    color: var(--roxo);
+    background-color: var(--roxo2);
+    color: var(--branco);
     font-weight: bold;
     transform: scale(1.1);
 }
@@ -87,7 +85,7 @@ nav a:hover{
     gap: 10rem;
 }
 #container-setcion img{
-    width: 500px;
+    width: 550px;
     height: auto;
 }
 .botoes-section1{
