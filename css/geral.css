@@ -82,6 +82,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 10rem;
 }
 #container-setcion img{
@@ -476,4 +477,9 @@ footer{
 [data-anime="scroll"].ativo{
     opacity: 1; /* opacidade faz o elemento sumir e aparecer */
     transform: translate3d(0,0,0); 
+}
+@media (max-width: 750px){
+    body{
+        background-color: red;
+    }
 }
