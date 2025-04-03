@@ -479,8 +479,26 @@ footer{
     transform: translate3d(0,0,0); 
 }
 @media (max-width: 750px){
-    body{
-        background-color: red;
+    nav{
+        display: none;
     }
-    
+    #container-setcion{
+        margin-top: 170px;
+        gap: 0.5rem;
+        scale: 0.75;
+    }
+    #container-setcion img{
+        width: 430px;
+        height: auto;
+    }
+    #section2{
+        margin-top: 780px;
+    }
+    [data-anime="scroll"]{ 
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+    #section3{
+        margin-top: 700px;
+    }
 }
