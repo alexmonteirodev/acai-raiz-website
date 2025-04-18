@@ -1,148 +1,172 @@
-.section-compras{
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, .5); /* fundo transparente */
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2000;
-    /* display: none; */
-    display: none;
-    justify-content: flex-end;
-
+.section-compras {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* fundo transparente */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  /* display: none; */
+  display: none;
+  justify-content: flex-end;
 }
-.section-compras.ativo{
-    display: flex;
+.section-compras.ativo {
+  display: flex;
 }
 @keyframes compras {
-    from{
-        opacity: 0;
-        transform: translate3d(50px,0,0);
-    }
-    to{
-        opacity: 1;
-        transform: translate3d(0,0,0);
-    }
+  from {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
-.ativo .aba-compras{
-    animation: compras .7s forwards;
+.ativo .aba-compras {
+  animation: compras 0.7s forwards;
 }
-.aba-compras{
-    background-color: var(--branco);
-    border-left: 5px solid var(--roxo2);
-    min-width: 40vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding-top: 20px;
+.aba-compras {
+  background-color: var(--branco);
+  border-left: 5px solid var(--roxo2);
+  min-width: 40vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 20px;
 }
-.aba-compras h5{
-    text-align: center;
-    color: var(--roxo2);
-    font-size: 2rem;
-    font-style: italic;
+.fechar-mobile {
+  display: none;
+  text-align: right;
+  margin-right: 25px;
 }
-.produto-compra{
-    margin-top: 1rem;
-    margin-left: 1.5rem;
-    margin-right: 2.5rem;
-    display: flex;
-    justify-content: space-between;
+.fechar-mobile p {
+  color: var(--cinza);
+  font-weight: bold;
+  font-size: 1.2rem;
 }
-.produto-compra p{
-    border-left: 2px solid var(--roxo2);
-    padding-left: 10px;
-    font-size: 1.2rem;
+.aba-compras h5 {
+  text-align: center;
+  color: var(--roxo2);
+  font-size: 2rem;
+  font-style: italic;
 }
-.quantidade-produto{
-    color: rgba(0, 0, 0, 0.65);
-    font-size: 0.9rem;
+.produto-compra {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  margin-right: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.produto-compra p {
+  border-left: 2px solid var(--roxo2);
+  padding-left: 10px;
+  font-size: 1.2rem;
+}
+.quantidade-produto {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 0.9rem;
 }
 /* Para navegadores WebKit (Chrome, Safari, Edge) */
-input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Para Firefox */
 input[type="number"] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
-.quantity{
-    text-align: center;
-    padding: 5px;
-    font-weight: bold;
-    font-size: 1.1rem;
+.quantity {
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--cinza);
+}
+
+.number-input button {
+  background-color: var(--roxo2);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.211);
+  padding-right: 10px;
+  padding-left: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+.number-input button:hover {
+  transform: scale(1.2);
+}
+.section-compras hr {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 1.5rem;
+}
+.total-div {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+.total-div p {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.btn-enviar {
+  display: flex;
+  justify-content: center;
+}
+.btn-enviar button {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  border-radius: 15px;
+  border: 2px solid var(--branco);
+  background-color: var(--roxo2);
+  color: var(--branco);
+  padding: 7px 25px 7px 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-weight: bold;
+  scale: 1.3;
+  border: 1px solid var(--branco);
+}
+.btn-enviar button:hover {
+  background-color: var(--branco);
+  color: var(--roxo2);
+  font-weight: bold;
+  transform: scale(1.1);
+  border: 1px solid var(--roxo2);
+}
+.texto-explicativo-carrinho {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 500px;
+  margin: auto;
+  color: var(--cinza);
+  text-align: center;
+}
+@media (max-width: 750px) {
+  .fechar-mobile {
+    display: block;
+    text-align: right;
+    margin-right: 25px;
+    margin-bottom: -20px;
+  }
+  .fechar-mobile p {
     color: var(--cinza);
-}
-
-.number-input button{
-    background-color: var(--roxo2);
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.211);
-    padding-right: 10px;
-    padding-left: 10px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    cursor: pointer;
-}
-.number-input button:hover{
-    transform: scale(1.2);
-
-}
-.section-compras hr{
-    margin-left: 4rem;
-    margin-right: 4rem;
-    margin-top: 1.5rem;
-}
-.total-div{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 4rem;
-    margin-right: 4rem;
-}
-.total-div p{
     font-weight: bold;
     font-size: 1.2rem;
-}
-.btn-enviar{
-    display: flex;
-    justify-content: center;
-}
-.btn-enviar button{
-    display: flex;
-    justify-content: center;
-    font-size: 1rem;
-    border-radius: 15px;
-    border: 2px solid var(--branco);
-    background-color: var(--roxo2);
-    color: var(--branco);
-    padding: 7px 25px 7px 25px;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    font-weight: bold;
-    scale: 1.3;
-    border: 1px solid var(--branco);
-
-}
-.btn-enviar button:hover{
-    background-color: var(--branco);
-    color: var(--roxo2);
-    font-weight: bold;
-    transform: scale(1.1);
-    border: 1px solid var(--roxo2);
-}
-.texto-explicativo-carrinho{
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    width: 500px;
-    margin: auto;
-    color: var(--cinza);
-    text-align: center;
+  }
+  .aba-compras {
+    border: none;
+  }
 }
