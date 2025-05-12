@@ -79,7 +79,7 @@ export default function compras(params) {
 
   const btnEnviar = document.querySelector(".btn-enviar button");
   const telefone = "5579991198907";
-  let mensagem = "teste";
+  let mensagem = "";
 
   btnEnviar.addEventListener("click", handleClickEnviar);
 
