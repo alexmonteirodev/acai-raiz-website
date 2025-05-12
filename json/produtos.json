@@ -1,26 +1,26 @@
 [
-    {
-        "id": "produto1",
-        "imagem": "/imgs/licor-png.png",
-        "nome": "Licor",
-        "descricao": "O LICOR - sabor autêntico do açaí puro, sem adição de ingredientes extras."
-    },
-    {
-        "id": "produto2",
-        "imagem": "/imgs/acai-produto.png",
-        "nome": "Açaí",
-        "descricao": " ACAI - perfeita do açaí com morangos frescos."
-    },
-    {
-        "id": "produto3",
-        "imagem": "/imgs/cafe-de-acai-produto.png",
-        "nome": "Café de Açaí",
-        "descricao": "O Café de Açaí possui muitos benefícios para a saúde, são eles: <br/> · Rico em vitaminas A, B1, B2, C, D, E, e K <br/> · Controle da Glicemia e Pressão Arterial <br/> · Regula o intestino, pois é rico em fibras e óleos essenciais <br/> · O café de açaí não contém glúten nem Cafeína"
-    },
-    {
-        "id": "produto4",
-        "imagem": "/imgs/cafe-de-acai-produto.png",
-        "nome": "Blend de Açaí",
-        "descricao": "Mistura ideal, elaborada para a apreciação e benefícios do Café de Açaí. Grãos de café gourmet e café de açaí torrados e moídos. <br/> · Não contém glúten <br/> · Contém Cafeín"
-    }
+  {
+    "id": "produto1",
+    "imagem": "/imgs/licor-png.png",
+    "nome": "Licor",
+    "descricao": "O sabor autêntico do açaí puro, sem adição de ingredientes extras."
+  },
+  {
+    "id": "produto2",
+    "imagem": "/imgs/acai-produto.png",
+    "nome": "Açaí",
+    "descricao": " A polpa pura do verdadeiro açaí sem adição de ingredientes extras, apenas batido com água."
+  },
+  {
+    "id": "produto3",
+    "imagem": "/imgs/cafe-de-acai-produto.png",
+    "nome": "Café de Açaí",
+    "descricao": "Benefícios à saúde: <br/> · Rico em vitaminas <br/> · Controle da Glicemia e Pressão Arterial <br/> · Regula o intestino<br/> · Não contém glúten nem Cafeína"
+  },
+  {
+    "id": "produto4",
+    "imagem": "/imgs/cafe-de-acai-produto.png",
+    "nome": "Blend de Açaí",
+    "descricao": "Mistura ideal, elaborada para a apreciação e benefícios do Café de Açaí. Grãos de café gourmet e café de açaí torrados e moídos. <br/> · Não contém glúten <br/> · Contém Cafeín"
+  }
 ]

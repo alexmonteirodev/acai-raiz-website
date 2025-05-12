@@ -169,4 +169,14 @@ input[type="number"] {
   .aba-compras {
     border: none;
   }
+  .number-input {
+    transform: scale(0.9);
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .number-input button {
+    transform: scale(1);
+  }
 }
