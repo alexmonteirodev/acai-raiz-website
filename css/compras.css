@@ -179,4 +179,10 @@ input[type="number"] {
   .number-input button {
     transform: scale(1);
   }
+  .aba-compras {
+    gap: 1rem;
+  }
+  .texto-explicativo-carrinho {
+    display: none;
+  }
 }
