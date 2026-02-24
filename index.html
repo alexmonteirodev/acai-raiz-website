@@ -60,6 +60,7 @@
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
         }
 
+        /* 
         .nav-logo {
             font-family: "Playfair Display", serif;
             font-size: 1.6rem;
@@ -69,6 +70,18 @@
 
         .nav-logo span {
             color: var(--gold);
+        } */
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo {
+            height: 70px;
+            /* ajuste se quiser maior ou menor */
+            width: auto;
+            display: block;
         }
 
         .nav-links {
@@ -661,12 +674,19 @@
         }
 
         .insta-item {
-            aspect-ratio: 1;
-            border-radius: 16px;
-            overflow: hidden;
             position: relative;
-            background: linear-gradient(135deg, var(--acai) 0%, var(--berry) 100%);
-            cursor: pointer;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 18px;
+        }
+
+        .insta-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform .4s ease;
         }
 
         .insta-item:first-child {
@@ -696,8 +716,14 @@
             font-size: 1.5rem;
         }
 
+        /* 
         .insta-item:hover .insta-ov {
             opacity: 1;
+        } */
+
+        .insta-item:hover img {
+            transform: scale(1.05);
+            /* antes estava exagerado */
         }
 
         .insta-cta {
@@ -1143,6 +1169,54 @@
             transition-delay: 0.4s;
         }
 
+        /* ===== INSTAGRAM PREMIUM ===== */
+
+        .instagram-contents {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            justify-items: center;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+
+        .imagem-quadrada-insta {
+            width: 100%;
+            max-width: 280px;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+        }
+
+        .imagem-quadrada-insta img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        /* ===== EFEITO HOVER ===== */
+
+        .imagem-quadrada-insta:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .imagem-quadrada-insta:hover img {
+            transform: scale(1.08);
+        }
+
+        /* ===== RESPONSIVO EXTRA ===== */
+
+        @media (max-width: 768px) {
+            .instagram-contents {
+                gap: 15px;
+            }
+        }
+
         /* MOBILE */
         .nav-mobile {
             position: fixed;
@@ -1259,7 +1333,10 @@
 <body>
 
     <nav id="navbar">
-        <div class="nav-logo">Açaí <span>Raiz</span></div>
+        <!-- <div class="nav-logo">Açaí <span>Raiz</span></div> -->
+        <div class="nav-logo">
+            <img id="logo" src="imgs/logo.png" alt="Logo Açaí Raiz">
+        </div>
         <ul class="nav-links">
             <li><a href="#hero">Início</a></li>
             <li><a href="#produtos">Produtos</a></li>
@@ -1312,9 +1389,10 @@
             <div>
                 <p class="section-label reveal">Nossos produtos</p>
                 <h2 class="section-title reveal reveal-delay-1">Feito com o melhor<br>do açaí</h2>
+                <p class="section-sub reveal reveal-delay-2">Cada produto é elaborado com a polpa mais pura, sem
+                    aditivos ou
+                    conservantes artificiais.</p>
             </div>
-            <p class="section-sub reveal reveal-delay-2">Cada produto é elaborado com a polpa mais pura, sem aditivos ou
-                conservantes artificiais.</p>
         </div>
         <div class="produtos-grid">
             <div class="produto-card reveal reveal-delay-1" onclick="openCart()">
@@ -1368,9 +1446,9 @@
             <div>
                 <p class="section-label reveal" style="color:rgba(201,168,76,0.8)">Depoimentos</p>
                 <h2 class="section-title reveal reveal-delay-1">Clientes que<br>nos amam 😍</h2>
+                <p class="section-sub reveal reveal-delay-2">Histórias reais de quem já provou e se apaixonou pelo sabor
+                    autêntico do açaí raiz.</p>
             </div>
-            <p class="section-sub reveal reveal-delay-2">Histórias reais de quem já provou e se apaixonou pelo sabor
-                autêntico do açaí raiz.</p>
         </div>
         <div class="depo-grid">
             <div class="depo-card reveal reveal-delay-1">
@@ -1409,6 +1487,17 @@
                     </div>
                 </div>
             </div>
+            <div class="depo-card reveal reveal-delay-3">
+                <div class="depo-stars">★★★☆☆</div>
+                <p class="depo-text">"O açaí é muito bom mas demorou pra entregar..."</p>
+                <div class="depo-author">
+                    <div class="depo-avatar">V</div>
+                    <div>
+                        <div class="depo-name">Valdir</div>
+                        <div class="depo-role">Comprador verificado</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1422,26 +1511,32 @@
             </div>
         </div>
         <div class="insta-grid reveal">
-            <a class="insta-item" href="https://www.instagram.com/acairaiz20" target="_blank"
-                style="background:linear-gradient(135deg,#3d1a5e,#8b1a6b)">
-                <div class="insta-ph">🫐</div>
+
+            <a class="insta-item" href="https://www.instagram.com/acairaiz20" target="_blank">
+                <img src="imgs/instagram-1.jpg" alt="Instagram 1">
                 <div class="insta-ov">📸</div>
             </a>
-            <a class="insta-item" href="https://www.instagram.com/acairaiz20" target="_blank"
-                style="background:linear-gradient(135deg,#5a2d82,#3d1a5e)">
-                <div class="insta-ph">☕</div>
+
+            <a class="insta-item" href="https://www.instagram.com/acairaiz20" target="_blank">
+                <img src="imgs/instagram-2.jpg" alt="Instagram 2">
                 <div class="insta-ov">📸</div>
             </a>
-            <a class="insta-item" href="https://www.instagram.com/acairaiz20" target="_blank"
-                style="background:linear-gradient(135deg,#22063a,#5a2d82)">
-                <div class="insta-ph">🍹</div>
+
+            <a class="insta-item" href="https://www.instagram.com/acairaiz20" target="_blank">
+                <img src="imgs/instagram-3.jpg" alt="Instagram 3">
                 <div class="insta-ov">📸</div>
             </a>
-            <a class="insta-item" href="https://www.instagram.com/acairaiz20" target="_blank"
-                style="background:linear-gradient(135deg,#8b1a6b,#3d1a5e)">
-                <div class="insta-ph">✨</div>
+
+            <a class="insta-item" href="https://www.instagram.com/acairaiz20" target="_blank">
+                <img src="imgs/instagram-4.jpg" alt="Instagram 4">
                 <div class="insta-ov">📸</div>
             </a>
+
+            <a class="insta-item" href="https://www.instagram.com/acairaiz20" target="_blank">
+                <img src="imgs/instagram-5.jpg" alt="Instagram 5">
+                <div class="insta-ov">📸</div>
+            </a>
+
         </div>
         <a class="insta-cta" href="https://www.instagram.com/acairaiz20" target="_blank">📷 Ver perfil no Instagram</a>
     </section>
@@ -1451,9 +1546,10 @@
             <div>
                 <p class="section-label reveal">Fale conosco</p>
                 <h2 class="section-title reveal reveal-delay-1">Estamos aqui<br>para você</h2>
+                <p class="section-sub reveal reveal-delay-2">Entre em contato, tire dúvidas ou faça seu pedido
+                    diretamente
+                    pelo WhatsApp.</p>
             </div>
-            <p class="section-sub reveal reveal-delay-2">Entre em contato, tire dúvidas ou faça seu pedido diretamente
-                pelo WhatsApp.</p>
         </div>
         <div class="contato-grid">
             <div>
@@ -1492,7 +1588,9 @@
     <footer>
         <div class="footer-grid">
             <div>
-                <div class="footer-brand">Açaí <span>Raiz</span></div>
+                <div class="nav-logo">
+                    <img id="logo" src="imgs/logo.png" alt="Logo Açaí Raiz">
+                </div>
                 <p class="footer-desc">Do campo à sua mesa. Açaí puro, natural e sem compromissos — desde 2020.</p>
                 <div class="footer-socials">
                     <a class="social-btn" href="https://wa.link/uox1eq" target="_blank">💬</a>
