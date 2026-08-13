@@ -1,0 +1,80 @@
+{
+  "head.title": "Açaí Raiz | Açaí seed coffee, made in Sergipe, Brazil",
+
+  "lang.aria": "Choose language",
+  "nav.inicio": "Home",
+  "nav.produtos": "Products",
+  "nav.contato": "Contact",
+  "nav.cta": "🛒 Order now",
+
+  "hero.badge": "From seed to cup",
+  "hero.title": "The coffee made from<br /><em>the açaí seed</em>",
+  "hero.desc": "From the açaí seed comes a coffee with a aroma all its own, roasted and ground right here in Sergipe, on the state's first commercial açaí grove.",
+  "hero.pill1": "100% Natural",
+  "hero.pill2": "Small-batch roast",
+  "hero.pill3": "Straight from the grower",
+  "hero.pill4": "Home delivery",
+  "hero.cta": "See products",
+  "hero.scroll": "Scroll down",
+
+  "prod.label": "Our products",
+  "prod.title": "Made with the best<br />of the açaí",
+  "prod.sub": "From the açaí seed, roasted and ground by hand. No additives, no artificial preservatives.",
+
+  "p1.desc": "Coffee made from the roasted açaí seed. Caffeine-free.",
+  "p1.alt": "250g kraft pouch of Café do grão de açaí, with a caffeine-free seal",
+  "p1.add": "Add Café do grão de açaí to cart",
+
+  "p2.desc": "Cocoa and açaí beans, roasted and ground. Caffeine-free.",
+  "p2.alt": "250g kraft pouch of Blend cacau e açaí, with a caffeine-free seal",
+  "p2.add": "Add Blend cacau to cart",
+
+  "p3.desc": "Coffee and açaí beans, roasted and ground into an exclusive blend. Contains caffeine.",
+  "p3.alt": "250g kraft pouch of Blend café de açaí",
+  "p3.add": "Add Blend Café Açaí to cart",
+
+  "insta.label": "Follow us",
+  "insta.sub": "Follow our day to day, news and recipes on Instagram.",
+  "insta.cta": "📷 View profile on Instagram",
+
+  "depo.label": "Reviews",
+  "depo.title": "Customers who<br />love us 😍",
+  "depo.sub": "Real stories from people who tried it and fell for the authentic taste of açaí raiz.",
+  "depo.t1": "\"I had never tried it. It's really different, but I liked it!\"",
+  "depo.t2": "\"Really different, and it has a lot of benefits. I'm drinking it instead of coffee because of the caffeine. Highly recommend!\"",
+  "depo.t3": "\"The flavour is quite different. I like that it has no caffeine.\"",
+  "depo.t4": "\"I like that it doesn't have that really strong coffee taste — it's more like a strong tea.\"",
+  "depo.role": "Loyal customer",
+
+  "cont.label": "Get in touch",
+  "cont.title": "We're here<br />for you",
+  "cont.sub": "Get in touch, ask a question or place your order straight through WhatsApp.",
+  "cont.email": "E-mail",
+  "cont.horario": "Hours",
+  "cont.horarioVal": "Mon to Sun: 8am to 8pm",
+  "cont.local": "Location",
+  "cont.localVal": "Sergipe, Brazil",
+
+  "video.aria": "Watch the Sergipe Rural news report on YouTube",
+  "video.cap": "A report from the TV programme <strong>Sergipe Rural</strong> about our production. <a href=\"https://youtu.be/a8TZoOlsLAQ?t=424\" target=\"_blank\" rel=\"noopener\">Watch on YouTube</a>.",
+
+  "foot.desc": "From our field to your table. Pure, natural açaí with no compromises — since 2020.",
+  "foot.nav": "Navigation",
+  "foot.prod": "Products",
+  "foot.copy": "© 2026 Açaí Raiz. All rights reserved.",
+  "foot.love": "Made with ❤️ in Sergipe",
+
+  "cart.title": "My Cart 🛒",
+  "cart.close": "Close cart",
+  "cart.total": "Total",
+  "cart.send": "💬 Send order via WhatsApp",
+  "cart.hint": "Your order will be sent to our team on WhatsApp to confirm payment and delivery.",
+  "cart.add1": "Add one Café do grão de açaí",
+  "cart.rem1": "Remove one Café do grão de açaí",
+  "cart.add2": "Add one Blend cacau",
+  "cart.rem2": "Remove one Blend cacau",
+  "cart.add3": "Add one Blend Café Açaí",
+  "cart.rem3": "Remove one Blend Café Açaí",
+
+  "js.carrinhoVazio": "Please add at least one product!"
+}
