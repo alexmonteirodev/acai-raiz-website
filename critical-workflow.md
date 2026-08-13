@@ -70,7 +70,7 @@ O `<head>` (linhas 4–10) tem só `charset`, `viewport`, `title` e a fonte. Com
 - [ ] `<link rel="icon" href="imgs/favicon.ico">` — **o arquivo já existe no repo mas nunca é referenciado**
 - [ ] Title mais descritivo: `Açaí Raiz` → `Açaí Raiz | Polpa de açaí pura e café do grão — Sergipe`
 - [ ] JSON-LD `LocalBusiness` + `Product` (habilita preço e avaliações no resultado do Google)
-- [ ] `<link rel="canonical">`, `robots.txt`, `sitemap.xml`
+- [x] ~~`<link rel="canonical">`, `robots.txt`, `sitemap.xml`~~ — entraram junto com o i18n (P3.6), com `hreflang` para os 3 idiomas
 - [ ] `preconnect` para `fonts.googleapis.com` e `fonts.gstatic.com`
 - [ ] Instalar analytics — hoje não há como saber se alguém compra
 
@@ -86,6 +86,19 @@ Chegou a existir uma versão self-hosted com o MP4 de 45 MB. Foi descartada ante
 
 - [ ] **Direitos**: a reportagem é conteúdo da emissora. Agora quem hospeda é o YouTube, não a Açaí Raiz — o risco caiu, mas fica o registro
 - [ ] A `.gitattributes` ganhou `*.mp4/*.jpg/*.png binary` para proteger binários do `* text=auto`. Vale manter mesmo sem o MP4
+
+## P3.6 — Site em 3 idiomas ✅ feito em 13/08/2026
+
+PT (padrão), EN e ES em `/`, `/en/` e `/es/` — arquivos HTML reais, indexáveis, gerados de fonte única por `tools/build-i18n.py`. Detalhes de uso no `CLAUDE.md`.
+
+Escolhas: manter 3 cópias de um HTML de 2.100 linhas foi descartado (cada ajuste de CSS viraria 3 edições e as cópias sairiam de sincronia); tradução só em JS foi descartada por não ser indexável. 65 chaves, ~384 palavras.
+
+Entraram junto: `sitemap.xml` com `hreflang`, `robots.txt`, `canonical` por idioma, seletor PT·EN·ES no nav e faixa que **sugere** o idioma do navegador sem nunca redirecionar.
+
+- [ ] **Revisar o claim de cafeína nas traduções.** `não contém cafeína` → `caffeine-free` / `sin cafeína` é claim de produto. Se houver intenção de vender fora do Brasil, precisa de revisão de quem entende do rótulo, não só de idioma
+- [ ] **O passo de build é o ponto frágil**: editar `index.html` e esquecer de rodar o script deixa EN/ES desatualizados sem aviso. Um GitHub Action rodando o build no push resolveria
+- [ ] Preços seguem em R$ nos 3 idiomas — conversão de moeda ficou fora de escopo
+- [ ] `missao.html` não foi traduzido (página órfã do site antigo)
 
 ## P4 — Informação que o cliente procura e não acha 🟡
 

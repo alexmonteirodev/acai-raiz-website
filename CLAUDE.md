@@ -10,9 +10,12 @@ Não há checkout próprio: o "carrinho" monta uma mensagem de texto e abre o Wh
 
 ## Comandos
 
-Não existe build, lint, test runner nem `package.json`. Nada a instalar.
+Não há lint, test runner nem `package.json`. Nada a instalar — o build usa só a stdlib do Python.
 
 ```bash
+# Regera en/ e es/ a partir do index.html. RODAR SEMPRE que mexer em texto.
+python3 tools/build-i18n.py
+
 # Preview local (necessário para o legado em js/, que usa ES modules e quebra em file://)
 python3 -m http.server 8000    # http://localhost:8000
 
@@ -21,6 +24,27 @@ git push origin main            # publica em www.acairaiz.com (ver CNAME)
 ```
 
 Não há ambiente de staging — **push na `main` é deploy em produção.**
+
+## i18n: o site tem 3 idiomas gerados de uma fonte só
+
+`index.html` é ao mesmo tempo **a fonte e o site em português** — é o único HTML editado à mão. `tools/build-i18n.py` lê ele mais `i18n/en.json` e `i18n/es.json` e escreve `en/index.html` e `es/index.html`. O script **nunca escreve no `index.html`**.
+
+**Editar `en/index.html` ou `es/index.html` à mão não adianta — o próximo build sobrescreve.** Ambos começam com um comentário avisando disso.
+
+Como marcar texto traduzível:
+
+```html
+<h1 data-i18n="hero.title">O café feito do<br /><em>grão do açaí</em></h1>
+```
+
+O valor no dicionário é **HTML, não texto puro**, então `<br>` e `<em>` vêm da própria tradução. Para atributos existe `data-i18n-alt` e `data-i18n-aria-label`. Toda string nova em PT precisa da chave nos dois JSON, senão o build falha com a lista do que falta (de propósito — chave silenciosamente ausente vira página meio traduzida em produção).
+
+Decisões embutidas no arranjo:
+
+- **Nome de produto não traduz** ("Café do grão de açaí" está impresso na embalagem). Só a descrição.
+- **A mensagem do pedido no WhatsApp é sempre em português**, em qualquer idioma do site — quem lê é a atendente. Só o alerta de carrinho vazio é traduzido, via o objeto `I18N` que o build injeta entre os marcadores `/* I18N:JS */`.
+- Os marcadores `<!-- I18N:HREFLANG -->` e `/* I18N:JS */` são **pareados** e devem sobreviver no `index.html`: é o que torna o build idempotente. Apagar um quebra o script.
+- `.prettierignore` exclui `en/` e `es/` para o Prettier não reformatar arquivo gerado.
 
 ## Arquitetura: duas gerações de site convivendo
 
