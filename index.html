@@ -424,14 +424,14 @@
 
         .produtos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 24px;
         }
 
         .produto-card {
             background: var(--cream);
             border-radius: 20px;
-            padding: 32px 28px 28px;
+            padding: 0;
             position: relative;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             cursor: pointer;
@@ -479,21 +479,42 @@
             z-index: 1;
         }
 
-        .produto-emoji {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, var(--acai) 0%, var(--berry) 100%);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            margin-bottom: 24px;
-            transition: background 0.4s;
+        .produto-img {
+            position: relative;
+            aspect-ratio: 600 / 712;
+            overflow: hidden;
+            /* tom do papel kraft: evita flash branco enquanto a foto carrega */
+            background: #c8a67c;
         }
 
-        .produto-card:hover .produto-emoji {
-            background: rgba(255, 255, 255, 0.15);
+        .produto-img img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .produto-card:hover .produto-img img {
+            transform: scale(1.04);
+        }
+
+        /* integra a foto ao gradiente roxo que o card ganha no hover */
+        .produto-img::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--acai) 0%, var(--berry) 100%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .produto-card:hover .produto-img::after {
+            opacity: 0.2;
+        }
+
+        .produto-body {
+            padding: 24px 28px 28px;
         }
 
         .produto-tag {
@@ -1027,13 +1048,17 @@
         .cart-item-icon {
             width: 48px;
             height: 48px;
-            background: linear-gradient(135deg, var(--acai), var(--berry));
+            background: #c8a67c;
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
+            overflow: hidden;
             flex-shrink: 0;
+        }
+
+        .cart-item-icon img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .cart-item-name {
@@ -1361,14 +1386,14 @@
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-badge">Direto da natureza</div>
-            <h1 class="hero-title">A verdadeira<br><em>polpa de açaí</em><br>na sua casa</h1>
-            <p class="hero-desc">Cultivado com amor, colhido no ponto certo. Do nosso campo direto para a sua mesa —
-                puro, natural e cheio de sabor.</p>
+            <div class="hero-badge">Do grão à xícara</div>
+            <h1 class="hero-title">O café feito do<br><em>grão do açaí</em></h1>
+            <p class="hero-desc">Do grão do açaí nasce um café de aroma único, torrado e moído aqui em Sergipe, no
+                primeiro açaizal comercial do estado.</p>
             <div class="hero-pills">
-                <div class="pill">100% Puro</div>
                 <div class="pill">100% Natural</div>
-                <div class="pill">Zero Açúcar</div>
+                <div class="pill">Torra artesanal</div>
+                <div class="pill">Direto do produtor</div>
                 <div class="pill">Entrega em casa</div>
             </div>
             <div class="hero-actions">
@@ -1389,60 +1414,66 @@
             <div>
                 <p class="section-label reveal">Nossos produtos</p>
                 <h2 class="section-title reveal reveal-delay-1">Feito com o melhor<br>do açaí</h2>
-                <p class="section-sub reveal reveal-delay-2">Cada produto é elaborado com a polpa mais pura, sem
-                    aditivos ou
-                    conservantes artificiais.</p>
+                <p class="section-sub reveal reveal-delay-2">Do grão do açaí, torrado e moído artesanalmente. Sem
+                    aditivos ou conservantes artificiais.</p>
             </div>
         </div>
         <div class="produtos-grid">
             <div class="produto-card reveal reveal-delay-1" onclick="openCart()">
-                <div class="produto-emoji">🫐</div>
-                <span class="produto-tag">1 Litro</span>
-                <h3 class="produto-nome">Polpa de Açaí</h3>
-                <p class="produto-desc">Polpa concentrada pura, sem açúcar e sem conservantes. Diretamente da nossa
-                    plantação.</p>
-                <div class="produto-footer">
-                    <div class="produto-preco"><small>R$</small> 40<small>,00</small></div>
-                    <button class="produto-comprar" onclick="openCart();event.stopPropagation()">+</button>
+                <div class="produto-img">
+                    <img src="imgs/produtos/cafe-grao.jpg" width="600" height="712" loading="lazy"
+                        alt="Embalagem kraft de 250g do Café do grão de açaí, com o selo &quot;não contém cafeína&quot;">
                 </div>
-
+                <div class="produto-body">
+                    <span class="produto-tag">250g</span>
+                    <h3 class="produto-nome">Café do grão de açaí</h3>
+                    <p class="produto-desc">Café criado a partir da torra do grão do açaí. Não contém cafeína.</p>
+                    <div class="produto-footer">
+                        <div class="produto-preco"><small>R$</small> 27<small>,00</small></div>
+                        <button class="produto-comprar" aria-label="Adicionar Café do grão de açaí ao carrinho"
+                            onclick="openCart();event.stopPropagation()">+</button>
+                    </div>
+                </div>
             </div>
             <div class="produto-card reveal reveal-delay-2" onclick="openCart()">
-                <div class="produto-emoji">☕</div>
-                <span class="produto-tag">250g</span>
-                <h3 class="produto-nome">Café do grão de açaí</h3>
-                <p class="produto-desc">Café criado a partir da torra do grão do açaí.</p>
-                <div class="produto-footer">
-                    <div class="produto-preco"><small>R$</small> 27<small>,00</small></div>
-                    <button class="produto-comprar" onclick="openCart();event.stopPropagation()">+</button>
+                <div class="produto-img">
+                    <img src="imgs/produtos/blend-cacau.jpg" width="600" height="712" loading="lazy"
+                        alt="Embalagem kraft de 250g do Blend cacau e açaí, com o selo &quot;não contém cafeína&quot;">
+                </div>
+                <div class="produto-body">
+                    <span class="produto-tag">250g</span>
+                    <h3 class="produto-nome">Blend cacau</h3>
+                    <p class="produto-desc">Grãos de cacau e açaí torrados e moídos. Não contém cafeína.</p>
+                    <div class="produto-footer">
+                        <div class="produto-preco"><small>R$</small> 27<small>,00</small></div>
+                        <button class="produto-comprar" aria-label="Adicionar Blend cacau ao carrinho"
+                            onclick="openCart();event.stopPropagation()">+</button>
+                    </div>
                 </div>
             </div>
             <div class="produto-card reveal reveal-delay-3" onclick="openCart()">
-                <div class="produto-emoji">☕</div>
-                <span class="produto-tag">250g</span>
-                <h3 class="produto-nome">Blend cacau</h3>
-                <p class="produto-desc">Café especial torrado com o grão do açaí misturado com cacau.
-                </p>
-                <div class="produto-footer">
-                    <div class="produto-preco"><small>R$</small> 27<small>,00</small></div>
-                    <button class="produto-comprar" onclick="openCart();event.stopPropagation()">+</button>
+                <div class="produto-img">
+                    <img src="imgs/produtos/blend-cafe.jpg" width="600" height="712" loading="lazy"
+                        alt="Embalagem kraft de 250g do Blend café de açaí">
                 </div>
-            </div>
-            <div class="produto-card reveal reveal-delay-4" onclick="openCart()">
-                <div class="produto-emoji">✨</div>
-                <span class="produto-tag">250g</span>
-                <h3 class="produto-nome">Blend Café Açaí</h3>
-                <p class="produto-desc">A combinação perfeita: grãos de açaí misturados com café especial em um blend
-                    exclusivo e
-                    sofisticado.</p>
-                <div class="produto-footer">
-                    <div class="produto-preco"><small>R$</small> 27<small>,00</small></div>
-                    <button class="produto-comprar" onclick="openCart();event.stopPropagation()">+</button>
+                <div class="produto-body">
+                    <span class="produto-tag">250g</span>
+                    <h3 class="produto-nome">Blend Café Açaí</h3>
+                    <p class="produto-desc">Grãos de café e açaí torrados e moídos, num blend exclusivo. Contém
+                        cafeína.</p>
+                    <div class="produto-footer">
+                        <div class="produto-preco"><small>R$</small> 27<small>,00</small></div>
+                        <button class="produto-comprar" aria-label="Adicionar Blend Café Açaí ao carrinho"
+                            onclick="openCart();event.stopPropagation()">+</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- DEPOIMENTOS OCULTOS — os 4 depoimentos falam de polpa/açaí, nenhum de café, e a polpa saiu do
+         catálogo. Reativar quando houver depoimentos reais de clientes do café. Não inventar depoimento:
+         review fabricada é risco de credibilidade e exposição no CDC (ver critical-workflow.md, P4).
     <section id="depoimentos" class="section">
         <div class="section-header">
             <div>
@@ -1502,6 +1533,8 @@
             </div>
         </div>
     </section>
+
+    -->
 
     <section id="instagram" class="section" style="text-align:center">
         <div class="section-header">
@@ -1611,9 +1644,8 @@
             <div>
                 <div class="footer-col-title">Produtos</div>
                 <ul class="footer-links">
-                    <li><a href="#produtos">Polpa de Açaí</a></li>
                     <li><a href="#produtos">Café do grão de açaí</a></li>
-                    <li><a href="#produtos">Café de Açaí</a></li>
+                    <li><a href="#produtos">Blend cacau</a></li>
                     <li><a href="#produtos">Blend Café Açaí</a></li>
                 </ul>
             </div>
@@ -1632,52 +1664,46 @@
             <button class="cart-close" onclick="closeCart()">✕</button>
         </div>
         <div class="cart-body">
-            <div class="cart-item">
-                <div class="cart-item-icon">🫐</div>
-                <div>
-                    <div class="cart-item-name">Polpa de Açaí</div>
-                    <div class="cart-item-size">1L · R$ 40,00</div>
-                </div>
-                <div class="cart-item-controls">
-                    <button class="qty-btn" onclick="changeQty(this,-1,40)">−</button>
-                    <span class="qty-val">0</span>
-                    <button class="qty-btn" onclick="changeQty(this,1,40)">+</button>
-                </div>
-            </div>
-            <div class="cart-item">
-                <div class="cart-item-icon">☕</div>
+            <div class="cart-item" data-preco="27">
+                <div class="cart-item-icon"><img src="imgs/produtos/cafe-grao.jpg" alt="" loading="lazy"></div>
                 <div>
                     <div class="cart-item-name">Café do grão de açaí</div>
                     <div class="cart-item-size">250g · R$ 27,00</div>
                 </div>
                 <div class="cart-item-controls">
-                    <button class="qty-btn" onclick="changeQty(this,-1,25)">−</button>
+                    <button class="qty-btn" aria-label="Remover uma unidade de Café do grão de açaí"
+                        onclick="changeQty(this,-1)">−</button>
                     <span class="qty-val">0</span>
-                    <button class="qty-btn" onclick="changeQty(this,1,25)">+</button>
+                    <button class="qty-btn" aria-label="Adicionar uma unidade de Café do grão de açaí"
+                        onclick="changeQty(this,1)">+</button>
                 </div>
             </div>
-            <div class="cart-item">
-                <div class="cart-item-icon">☕</div>
+            <div class="cart-item" data-preco="27">
+                <div class="cart-item-icon"><img src="imgs/produtos/blend-cacau.jpg" alt="" loading="lazy"></div>
                 <div>
                     <div class="cart-item-name">Blend cacau</div>
                     <div class="cart-item-size">250g · R$ 27,00</div>
                 </div>
                 <div class="cart-item-controls">
-                    <button class="qty-btn" onclick="changeQty(this,-1,25)">−</button>
+                    <button class="qty-btn" aria-label="Remover uma unidade de Blend cacau"
+                        onclick="changeQty(this,-1)">−</button>
                     <span class="qty-val">0</span>
-                    <button class="qty-btn" onclick="changeQty(this,1,25)">+</button>
+                    <button class="qty-btn" aria-label="Adicionar uma unidade de Blend cacau"
+                        onclick="changeQty(this,1)">+</button>
                 </div>
             </div>
-            <div class="cart-item">
-                <div class="cart-item-icon">✨</div>
+            <div class="cart-item" data-preco="27">
+                <div class="cart-item-icon"><img src="imgs/produtos/blend-cafe.jpg" alt="" loading="lazy"></div>
                 <div>
                     <div class="cart-item-name">Blend Café Açaí</div>
                     <div class="cart-item-size">250g · R$ 27,00</div>
                 </div>
                 <div class="cart-item-controls">
-                    <button class="qty-btn" onclick="changeQty(this,-1,25)">−</button>
+                    <button class="qty-btn" aria-label="Remover uma unidade de Blend Café Açaí"
+                        onclick="changeQty(this,-1)">−</button>
                     <span class="qty-val">0</span>
-                    <button class="qty-btn" onclick="changeQty(this,1,25)">+</button>
+                    <button class="qty-btn" aria-label="Adicionar uma unidade de Blend Café Açaí"
+                        onclick="changeQty(this,1)">+</button>
                 </div>
             </div>
         </div>
@@ -1731,7 +1757,11 @@
             document.getElementById('cartPanel').classList.remove('open');
             document.body.style.overflow = '';
         }
-        function changeQty(btn, delta, preco) {
+        // preço vem sempre do data-preco do .cart-item — nunca do texto exibido
+        const precoDe = item => parseFloat(item.dataset.preco);
+        const brl = v => 'R$ ' + v.toFixed(2).replace('.', ',');
+
+        function changeQty(btn, delta) {
             const val = btn.parentElement.querySelector('.qty-val');
             let n = parseInt(val.textContent) + delta;
             if (n < 0) n = 0; if (n > 20) n = 20;
@@ -1741,10 +1771,9 @@
             let sum = 0;
             document.querySelectorAll('.cart-item').forEach(item => {
                 const qty = parseInt(item.querySelector('.qty-val').textContent);
-                const m = item.querySelector('.cart-item-size').textContent.match(/R\$ ([\d,]+)/);
-                if (m) sum += qty * parseFloat(m[1].replace(',', '.'));
+                sum += qty * precoDe(item);
             });
-            document.getElementById('cartTotal').textContent = 'R$ ' + sum.toFixed(2).replace('.', ',');
+            document.getElementById('cartTotal').textContent = brl(sum);
             return sum;
         }
         function sendWhatsApp() {
@@ -1756,14 +1785,13 @@
                 if (qty > 0) {
                     hasItems = true;
                     const name = item.querySelector('.cart-item-name').textContent;
-                    const m = item.querySelector('.cart-item-size').textContent.match(/R\$ ([\d,]+)/);
-                    const price = m ? parseFloat(m[1].replace(',', '.')) : 0;
+                    const price = precoDe(item);
                     total += qty * price;
-                    lines.push(`• ${name} x${qty} = R$ ${(qty * price).toFixed(2).replace('.', ',')}`);
+                    lines.push(`• ${name} x${qty} = ${brl(qty * price)}`);
                 }
             });
             if (!hasItems) { alert('Adicione pelo menos um produto!'); return; }
-            lines.push(`\n*Total: R$ ${total.toFixed(2).replace('.', ',')}*`);
+            lines.push(`\n*Total: ${brl(total)}*`);
             window.open('https://wa.me/5579991198907?text=' + encodeURIComponent(lines.join('\n')), '_blank');
         }
     </script>
