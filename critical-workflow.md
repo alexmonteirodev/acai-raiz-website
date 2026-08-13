@@ -76,6 +76,17 @@ O `<head>` (linhas 4–10) tem só `charset`, `viewport`, `title` e a fonte. Com
 
 ---
 
+## P3.5 — Vídeo da reportagem ✅ feito em 13/08/2026
+
+O placeholder de mapa (que era só um emoji 🗺️) virou a reportagem do **Sergipe Rural** sobre a produção, via YouTube (`a8TZoOlsLAQ`).
+
+Não é um iframe cru: é uma **fachada**. O que aparece é o poster (43 KB, frame do torrador extraído do vídeo) com botão de play; o iframe do YouTube só é criado no clique. Um embed comum baixaria ~1 MB de script do Google só para existir, e faria requisição a terceiro em toda visita — inclusive de quem nunca assiste. Usa `youtube-nocookie.com`, e a legenda tem link direto para o YouTube como fallback se o JS falhar.
+
+Chegou a existir uma versão self-hosted com o MP4 de 45 MB. Foi descartada antes de qualquer commit — **o arquivo nunca entrou no histórico do git**, então não há peso a limpar.
+
+- [ ] **Direitos**: a reportagem é conteúdo da emissora. Agora quem hospeda é o YouTube, não a Açaí Raiz — o risco caiu, mas fica o registro
+- [ ] A `.gitattributes` ganhou `*.mp4/*.jpg/*.png binary` para proteger binários do `* text=auto`. Vale manter mesmo sem o MP4
+
 ## P4 — Informação que o cliente procura e não acha 🟡
 
 - [ ] **Entrega**: "Sergipe, Brasil" (linha 1581) é vago demais. Qual cidade? Entrega em quais bairros? Frete quanto? Prazo? São as três primeiras perguntas de quem compra comida online
