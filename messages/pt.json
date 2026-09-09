@@ -1,0 +1,156 @@
+{
+  "head": {
+    "title": "Açaí Raiz | Café do grão de açaí, produzido em Sergipe",
+    "desc": "Transformamos o caroço do açaí em café, blends de cacau e de café. Produção orgânica familiar em Sergipe, com entregas nacionais e internacionais."
+  },
+  "lang": {
+    "aria": "Escolher idioma"
+  },
+  "nav": {
+    "logoAlt": "Açaí Raiz",
+    "produtos": "Produtos",
+    "beneficios": "Benefícios",
+    "contato": "Contato",
+    "cta": "Seja parceiro",
+    "abrirMenu": "Abrir menu",
+    "fecharMenu": "Fechar menu"
+  },
+  "hero": {
+    "eyebrow": "Produzido em Sergipe",
+    "titulo": "O café feito<br></br>do grão de açaí.",
+    "sub": "Leve para o seu negócio uma nova forma de consumir açaí: natural, inovadora e surpreendente.",
+    "ctaPrimario": "Quero ser parceiro",
+    "ctaSecundario": "Ver produtos",
+    "entregas": "Entregas nacionais e internacionais",
+    "xicaraAlt": "Xícara de café de açaí, com grãos e sementes ao redor",
+    "selos": {
+      "organico": "100% orgânico",
+      "energia": "Fonte de energia",
+      "brasileiro": "Produto brasileiro"
+    }
+  },
+  "numeros": {
+    "titulo": "Nossos números",
+    "sub": "Produção crescente, com parceiros no Brasil e no exterior.",
+    "produtos": "Produtos inovadores",
+    "parceiros": "Parceiros ativos",
+    "toneladas": "Toneladas por ano",
+    "vendidos": "Produtos vendidos"
+  },
+  "essencia": {
+    "eyebrow": "Nossa essência",
+    "titulo": "Natural por origem.<br></br>Inovador por natureza.",
+    "desc": "Transformamos ingredientes naturais em novas experiências, com inovação, aproveitamento integral e propósito em cada produto.",
+    "cafe": {
+      "titulo": "CAFÉ",
+      "desc": "Energia para começar diferente.",
+      "alt": "Grãos de café torrados"
+    },
+    "cacau": {
+      "titulo": "CACAU",
+      "desc": "Sabor intenso, rico em antioxidantes.",
+      "alt": "Amêndoas de cacau"
+    },
+    "acai": {
+      "titulo": "AÇAÍ",
+      "desc": "Aproveitamento integral, do fruto ao novo produto.",
+      "alt": "Frutos de açaí no cacho"
+    }
+  },
+  "produtos": {
+    "eyebrow": "linha completa",
+    "titulo": "Conheça nossos produtos",
+    "sub": "Três versões feitas a partir do caroço do açaí, todas em embalagem de 250g, moídas e prontas para coar.",
+    "trioAlt": "As três embalagens de 250g da linha Açaí Raiz",
+    "itens": {
+      "cafe-grao": {
+        "desc": "100% caroço de açaí torrado e moído. Sem cafeína, com sabor amadeirado e cor avermelhada."
+      },
+      "blend-cacau": {
+        "desc": "Açaí com cacau puro. Mais intenso no aroma e naturalmente rico em antioxidantes."
+      },
+      "blend-cafe": {
+        "desc": "Açaí com café arábica. Mantém a cafeína do café com o corpo suave do açaí."
+      }
+    }
+  },
+  "origem": {
+    "eyebrow": "origem",
+    "titulo": "Orgânico, de produção familiar",
+    "desc": "Três a quatro linhas sobre as famílias produtoras, o manejo orgânico e o aproveitamento integral do fruto.",
+    "fotoAlt": "Produção familiar no açaizal",
+    "fotoLegenda": "[ FOTO: ORIGEM ]<br></br>produção familiar · retrato 4:5",
+    "etapas": {
+      "colheita": {
+        "titulo": "Colheita familiar",
+        "desc": "O açaí é colhido manualmente, respeitando o ciclo natural do fruto e o cuidado com a terra."
+      },
+      "caroco": {
+        "titulo": "Aproveitamento do caroço",
+        "desc": "Depois da extração da polpa, o caroço é separado e aproveitado, dando um novo destino a uma parte essencial do fruto."
+      },
+      "torra": {
+        "titulo": "Torra artesanal",
+        "desc": "O caroço passa por uma torra artesanal e cuidadosa, transformando o fruto em uma bebida com sabor, aroma e personalidade únicos."
+      },
+      "envase": {
+        "titulo": "Envase e envio",
+        "desc": "Depois de preparado, o produto é cuidadosamente envasado e segue direto da produção familiar até a sua casa."
+      }
+    }
+  },
+  "depoimentos": {
+    "eyebrow": "depoimentos",
+    "titulo": "Quem já vende",
+    "contagem": "3 depoimentos",
+    "um": {
+      "citacao": "Citação do parceiro em três linhas, falando do resultado obtido com o produto.",
+      "nome": "Nome do parceiro",
+      "papel": "cafeteria · cidade"
+    },
+    "dois": {
+      "citacao": "Citação do parceiro em três linhas, falando do resultado obtido com o produto.",
+      "nome": "Nome do parceiro",
+      "papel": "mercado · cidade"
+    },
+    "tres": {
+      "citacao": "Citação do parceiro em três linhas, falando do resultado obtido com o produto.",
+      "nome": "Nome do parceiro",
+      "papel": "distribuidor · cidade"
+    }
+  },
+  "instagram": {
+    "eyebrow": "instagram",
+    "cta": "Seguir no Instagram",
+    "fotos": {
+      "prateleira": "Embalagem do Blend cacau e açaí na prateleira de uma cafeteria",
+      "trioMesa": "As três embalagens sobre mesa de madeira, entre grãos de café e frutos de açaí",
+      "acaizeiro": "Açaizeiro carregado de cachos de açaí, visto de baixo contra o céu",
+      "tigela": "Tigela de açaí batido ao lado de uma placa escrita Açaí Raiz",
+      "trio": "As três embalagens de 250g da linha Açaí Raiz",
+      "frutos": "Frutos de açaí e caroços já limpos, lado a lado sobre madeira"
+    }
+  },
+  "contato": {
+    "eyebrow": "contato",
+    "titulo": "Fale com a gente pelo WhatsApp",
+    "cta": "Falar no WhatsApp",
+    "email": "e-mail",
+    "local": "localização",
+    "localVal": "Sergipe · Brasil",
+    "whatsapp": "whatsapp"
+  },
+  "rodape": {
+    "produto": "O produto",
+    "origem": "Origem",
+    "instagram": "Instagram",
+    "contato": "Contato",
+    "copy": "© 2026 · Sergipe, Brasil"
+  },
+  "video": {
+    "eyebrow": "Reportagem",
+    "titulo": "Sergipe Rural na Açaí Raiz",
+    "aria": "Assistir à reportagem do Sergipe Rural sobre a Açaí Raiz no YouTube",
+    "posterAlt": "Cena da reportagem do Sergipe Rural gravada no açaizal"
+  }
+}

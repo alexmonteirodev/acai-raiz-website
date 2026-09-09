@@ -1,0 +1,156 @@
+{
+  "head": {
+    "title": "Açaí Raiz | Café hecho del grano de açaí, producido en Sergipe",
+    "desc": "Transformamos el hueso del açaí en café y mezclas de cacao y café. Producción orgánica familiar en Sergipe, con envíos nacionales e internacionales."
+  },
+  "lang": {
+    "aria": "Elegir idioma"
+  },
+  "nav": {
+    "logoAlt": "Açaí Raiz",
+    "produtos": "Productos",
+    "beneficios": "Beneficios",
+    "contato": "Contacto",
+    "cta": "Sé nuestro socio",
+    "abrirMenu": "Abrir menú",
+    "fecharMenu": "Cerrar menú"
+  },
+  "hero": {
+    "eyebrow": "Producido en Sergipe",
+    "titulo": "El café hecho<br></br>del grano de açaí.",
+    "sub": "Lleva a tu negocio una nueva forma de consumir açaí: natural, innovadora y sorprendente.",
+    "ctaPrimario": "Quiero ser socio",
+    "ctaSecundario": "Ver productos",
+    "entregas": "Envíos nacionales e internacionales",
+    "xicaraAlt": "Taza de café de açaí, con granos y semillas alrededor",
+    "selos": {
+      "organico": "100% orgánico",
+      "energia": "Fuente de energía",
+      "brasileiro": "Producto brasileño"
+    }
+  },
+  "numeros": {
+    "titulo": "Nuestros números",
+    "sub": "Producción creciente, con socios en Brasil y en el exterior.",
+    "produtos": "Productos innovadores",
+    "parceiros": "Socios activos",
+    "toneladas": "Toneladas por año",
+    "vendidos": "Productos vendidos"
+  },
+  "essencia": {
+    "eyebrow": "Nuestra esencia",
+    "titulo": "Natural por origen.<br></br>Innovador por naturaleza.",
+    "desc": "Transformamos ingredientes naturales en nuevas experiencias, con innovación, aprovechamiento integral y propósito en cada producto.",
+    "cafe": {
+      "titulo": "CAFÉ",
+      "desc": "Energía para empezar diferente.",
+      "alt": "Granos de café tostados"
+    },
+    "cacau": {
+      "titulo": "CACAO",
+      "desc": "Sabor intenso, rico en antioxidantes.",
+      "alt": "Almendras de cacao"
+    },
+    "acai": {
+      "titulo": "AÇAÍ",
+      "desc": "Del fruto al nuevo producto.",
+      "alt": "Frutos de açaí en el racimo"
+    }
+  },
+  "produtos": {
+    "eyebrow": "línea completa",
+    "titulo": "Conoce nuestros productos",
+    "sub": "Tres versiones hechas a partir del hueso del açaí, todas en envase de 250g, molidas y listas para colar.",
+    "trioAlt": "Los tres envases de 250g de la línea Açaí Raiz",
+    "itens": {
+      "cafe-grao": {
+        "desc": "100% hueso de açaí tostado y molido. Sin cafeína, con sabor amaderado y color rojizo."
+      },
+      "blend-cacau": {
+        "desc": "Açaí con cacao puro. Más intenso en el aroma y naturalmente rico en antioxidantes."
+      },
+      "blend-cafe": {
+        "desc": "Açaí con café arábica. Mantiene la cafeína del café con el cuerpo suave del açaí."
+      }
+    }
+  },
+  "origem": {
+    "eyebrow": "origen",
+    "titulo": "Orgánico, de producción familiar",
+    "desc": "Tres o cuatro líneas sobre las familias productoras, el manejo orgánico y el aprovechamiento integral del fruto.",
+    "fotoAlt": "Producción familiar en el açaizal",
+    "fotoLegenda": "[ FOTO: ORIGEN ]<br></br>producción familiar · retrato 4:5",
+    "etapas": {
+      "colheita": {
+        "titulo": "Cosecha familiar",
+        "desc": "El açaí se recolecta manualmente, respetando el ciclo natural del fruto y el cuidado de la tierra."
+      },
+      "caroco": {
+        "titulo": "Aprovechamiento del hueso",
+        "desc": "Después de extraer la pulpa, el hueso se separa y se aprovecha, dando un nuevo uso a una parte esencial del fruto."
+      },
+      "torra": {
+        "titulo": "Tostado artesanal",
+        "desc": "El hueso pasa por un tostado artesanal y cuidadoso, transformando el fruto en una bebida con un sabor, aroma y personalidad únicos."
+      },
+      "envase": {
+        "titulo": "Envasado y envío",
+        "desc": "Una vez preparado, el producto se envasa cuidadosamente y viaja directamente desde la producción familiar hasta tu casa."
+      }
+    }
+  },
+  "depoimentos": {
+    "eyebrow": "testimonios",
+    "titulo": "Quién ya lo vende",
+    "contagem": "3 testimonios",
+    "um": {
+      "citacao": "Cita del socio en tres líneas, hablando del resultado obtenido con el producto.",
+      "nome": "Nombre del socio",
+      "papel": "cafetería · ciudad"
+    },
+    "dois": {
+      "citacao": "Cita del socio en tres líneas, hablando del resultado obtenido con el producto.",
+      "nome": "Nombre del socio",
+      "papel": "mercado · ciudad"
+    },
+    "tres": {
+      "citacao": "Cita del socio en tres líneas, hablando del resultado obtenido con el producto.",
+      "nome": "Nombre del socio",
+      "papel": "distribuidor · ciudad"
+    }
+  },
+  "instagram": {
+    "eyebrow": "instagram",
+    "cta": "Seguir en Instagram",
+    "fotos": {
+      "prateleira": "El envase del blend de cacao y açaí en la estantería de una cafetería",
+      "trioMesa": "Los tres envases sobre una mesa de madera, entre granos de café y frutos de açaí",
+      "acaizeiro": "Una palmera de açaí cargada de racimos, vista desde abajo contra el cielo",
+      "tigela": "Un bol de açaí batido junto a un cartel que dice Açaí Raiz",
+      "trio": "Los tres envases de 250g de la línea Açaí Raiz",
+      "frutos": "Frutos de açaí y huesos ya limpios, uno al lado del otro sobre madera"
+    }
+  },
+  "contato": {
+    "eyebrow": "contacto",
+    "titulo": "Habla con nosotros por WhatsApp",
+    "cta": "Hablar por WhatsApp",
+    "email": "e-mail",
+    "local": "ubicación",
+    "localVal": "Sergipe · Brasil",
+    "whatsapp": "whatsapp"
+  },
+  "rodape": {
+    "produto": "El producto",
+    "origem": "Origen",
+    "instagram": "Instagram",
+    "contato": "Contacto",
+    "copy": "© 2026 · Sergipe, Brasil"
+  },
+  "video": {
+    "eyebrow": "Reportaje",
+    "titulo": "Sergipe Rural en Açaí Raiz",
+    "aria": "Ver el reportaje de Sergipe Rural sobre Açaí Raiz en YouTube",
+    "posterAlt": "Escena del reportaje de Sergipe Rural grabada en el açaizal"
+  }
+}

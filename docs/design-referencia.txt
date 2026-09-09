@@ -1,0 +1,284 @@
+<div>  | w:100% bg:L0.965/0.02/85 c:L0.24/0.02/45
+  <div>  | pos:sticky p:0 40px
+    <div>  | maxw:1280px m:0 auto r:999px bg:L0.995/0.008/85a0.88 blur:blur(14px) bd:1px solid L0.93/0.012/75a0.9 shadow:0 22px 48px -26px L0.3/0.03/45a0.45 p:10px 14px 10px 24px disp:grid cols:1fr auto 1fr gap:24px op:1
+      <a> href=# | disp:flex gap:10px
+        <img> src=0aa096cd-8fc8-48a3-a74b-50bff7d84f49 alt=Açaí Raiz | h:61px w:64px m:-14px 0
+      <div>  | disp:flex gap:34px
+        <a> href=#produto | fs:14.5px fw:500 c:L0.32/0.02/45  >>Produtos
+        <a> href=#beneficios | fs:14.5px fw:500 c:L0.32/0.02/45  >>Benefícios
+        <a> href=#contato | fs:14.5px fw:500 c:L0.32/0.02/45  >>Contato
+      <div>  | disp:flex gap:14px
+        <div>  | disp:flex gap:2px p:4px r:999px bg:L0.94/0.015/85
+          <sc-for> list={{ idiomas }} as=i
+            <div> sc-camel-on-click={{ i.selecionar }} | p:6px 11px r:999px ff:'JetBrains Mono', monospace fs:11px ls:0.06em bg:{{ i.fundo }} c:{{ i.cor }}  >>{{ i.sigla }}
+        <div>  | p:13px 22px r:999px bg:L0.62/0.13/118 c:#FFFDFD fs:14px fw:700  >>Seja parceiro
+  <div> id=hero-cena | pos:relative p:130px 40px 88px bg:radial-gradient(115% 95% at 82% 34%, L0.92/0.05/108 0%, L0.945/0.032/95 38%, L0.
+    <div>  | maxw:1280px m:0 auto disp:grid cols:minmax(0, 1.02fr) minmax(0, 1fr) gap:48px op:0.94
+      <div>  | disp:flex dir:column gap:24px pos:relative fs:20px
+        <span>  | ff:'JetBrains Mono', monospace fs:12px ls:0.16em tt:uppercase c:L0.45/0.11/40  >>Produzido em sergipe
+        <h1>  | ff:Anton, sans-serif fw:400 fs:78px lh:0.99 ls:-0.01em m:0 c:L0.27/0.03/42 h:160px w:602px  >>O café feito&nbsp;do grão de açaí.
+        <p>  | m:0 fs:18px lh:1.55 c:L0.42/0.02/45 maxw:46ch
+          <span> 
+          <span> 
+          <span>  | fs:20px  >>Transformamos o açaí
+          <br> 
+          <span>  | fs:20px  >>em produtos surpreendentes.
+      <div>  | disp:flex gap:12px
+        <a> href=#contato | p:16px 28px r:999px bg:L0.62/0.13/118 c:#FFFFFF fw:700 fs:15px  >>Quero ser parceiro
+        <a> href=#produto | p:16px 28px r:999px bd:1px solid L0.78/0.03/60 c:L0.3/0.02/45 fw:600 fs:15px  >>Ver produtos
+      <div>  | disp:flex gap:10px
+        <svg> 
+          <circle> 
+        <path> 
+      <path> 
+  <span>  | fs:14.5px c:L0.45/0.02/45  >>Entregas nacionais e internacionais
+<div>  | pos:relative h:620px
+  <div>  | pos:absolute w:460px h:460px m:-230px 0 0 -230px r:50% bg:radial-gradient(circle at 40% 35%, L0.99/0.02/95, L0.9/0.045/108)
+  <div>  | pos:absolute w:640px h:640px m:-320px 0 0 -320px r:50% bg:radial-gradient(circle at 50% 50%, L0.88/0.06/110a0.5, transparent 68%)
+  <div>  | pos:absolute w:460px h:460px m:-230px 0 0 -230px r:50% bd:1px solid L0.62/0.13/118a0.45
+  <div>  | pos:absolute w:560px h:560px m:-280px 0 0 -280px r:50% bd:1px dashed L0.82/0.035/95
+  <div>  | pos:absolute w:660px h:660px m:-330px 0 0 -330px r:50% bd:1px solid L0.88/0.025/95
+  <div>  | pos:absolute w:560px h:470px m:-235px 0 0 -250px
+    <img> src=7b8018eb-3a78-4522-9774-b5ebe7ec3aee alt=Xícara de café de açaí com grãos e sem | w:100% h:100% fit:contain disp:block
+  <div>  | pos:absolute w:8px h:8px r:50% bg:L0.62/0.13/118 shadow:0 0 14px 4px L0.62/0.13/118a0.4
+  <div>  | pos:absolute w:6px h:6px r:50% bg:L0.55/0.12/40 shadow:0 0 12px 4px L0.55/0.12/40a0.35
+  <div>  | pos:absolute w:5px h:5px r:50% bg:L0.62/0.13/118 shadow:0 0 10px 3px L0.62/0.13/118a0.35
+  <div>  | pos:absolute disp:flex gap:10px p:11px 18px 11px 13px r:999px bg:L0.99/0.014/85a0.82 bd:1px solid L0.92/0.015/75a0.7 shadow:0 16px 34px -20px L0.3/0.03/45a0.5
+    <span>  | w:30px h:30px r:50% bg:L0.9/0.06/130 disp:flex
+      <svg> 
+        <path> 
+      <path> 
+<span>  | ff:Archivo, sans-serif fw:700 fs:13.5px c:L0.28/0.02/45  >>100% orgânico
+<div>  | pos:absolute disp:flex gap:10px p:11px 18px 11px 13px r:999px bg:L0.99/0.014/85a0.82 bd:1px solid L0.92/0.015/75a0.7 shadow:0 16px 34px -20px L0.3/0.03/45a0.5
+  <span>  | w:30px h:30px r:50% bg:L0.92/0.06/85 disp:flex
+    <svg> 
+      <path> 
+<span>  | ff:Archivo, sans-serif fw:700 fs:13.5px c:L0.28/0.02/45  >>Fonte de energia
+<div>  | pos:absolute op:1 disp:flex gap:10px p:11px 18px 11px 13px r:999px bg:L0.99/0.014/85a0.82 bd:1px solid L0.92/0.015/75a0.7 shadow:0 16px 34px -20px L0.3/0.03/45a0.5
+  <span>  | w:30px h:30px r:50% bg:L0.9/0.05/320 disp:flex
+    <svg> 
+      <circle> 
+    <path> 
+<span>  | ff:Archivo, sans-serif fw:700 fs:13.5px c:L0.28/0.02/45  >>Produto brasileiro
+<sc-if> 
+  <div>  | maxw:1280px m:0 auto 96px p:0 40px
+    <div>  | bg:L0.93/0.035/100 r:22px p:44px 48px disp:grid cols:minmax(200px, 260px) minmax(0, 1fr) gap:56px op:1
+      <div>  | disp:flex dir:column gap:10px
+        <h2>  | ff:Anton, sans-serif fw:400 fs:36px lh:1.02 ls:-0.03em m:0 c:L0.27/0.03/42  >>Nossos números
+        <p>  | m:0 fs:16px lh:1.5 c:L0.48/0.02/45 maxw:26ch  >>Produção crescente, com parceiros no Brasil e no exterior.
+      <div>  | disp:grid cols:repeat(4, 1fr) gap:28px
+        <sc-for> list={{ stats }} as=s
+          <div>  | disp:flex dir:column gap:6px
+            <span>  | ff:Anton, sans-serif fw:400 fs:46px lh:1.5 ls:-0.03em c:L0.27/0.03/42  >>{{ s.num }}
+            <span>  | fs:16px c:L0.45/0.02/45 lh:1.5  >>{{ s.label }}
+<div> id=beneficios | p:96px 40px
+  <div>  | maxw:1280px m:0 auto disp:grid cols:minmax(300px, 0.85fr) minmax(0, 1.4fr) gap:72px
+    <div>  | disp:flex dir:column gap:22px w:489px h:348px
+      <span>  | disp:inline-flex gap:9px p:8px 15px r:999px bg:L0.93/0.035/100 ff:'JetBrains Mono', monospace fs:10.5px ls:0.14em tt:uppercase c:L0.45/0.11/40
+        <svg> 
+          <path> 
+        <path> 
+    'Nossa essência'
+  <h2>  | ff:Anton, sans-serif fw:400 fs:54px lh:1 ls:0em m:0 c:L0.27/0.03/42  >>Natural por origem.
+    <span>  | c:L0.27/0.03/42  >>Inovador por natureza.
+    <p>  | m:0 fs:20px lh:1.6 c:L0.45/0.02/45 maxw:40ch  >>Transformamos ingredientes naturais em novas experiências, com inovaçã
+  <div>  | disp:grid cols:repeat(3, 1fr) gap:18px
+    <div>  | pos:relative h:540px r:20px bg:L0.34/0.04/42
+      <image-slot> id=essencia-cafe src=c1977e27-c87c-49c2-bef1-abed5368ff4b placeholder=Solte a foto de café | pos:absolute inset:0 w:100% h:100%
+    <div>  | pos:absolute inset:0 bg:linear-gradient(to top, L0.2/0.03/42a0.92 0%, L0.22/0.03/42a0.55 38%, transparen
+    <div>  | pos:absolute p:26px 24px 28px disp:flex dir:column gap:12px
+      <span>  | w:44px h:44px r:50% bg:L0.965/0.02/85a0.16 bd:1px solid L0.96/0.02/85a0.35 disp:flex
+        <svg> 
+          <path> 
+        <path> 
+      <path> 
+<span>  | ff:Archivo, sans-serif fw:700 fs:21px lh:1.15 c:L0.97/0.015/85  >>CAFÉ
+<span>  | fs:14.5px lh:1.5 c:L0.88/0.02/82  >>Energia para começar diferente.
+<div>  | pos:relative h:540px r:20px bg:L0.34/0.04/42
+  <image-slot> id=essencia-cacau src=8a34ba13-7298-42cb-9710-723cbb2e8661 placeholder=Solte a foto de cacau | pos:absolute inset:0 w:100% h:100%
+<div>  | pos:absolute inset:0 bg:linear-gradient(to top, L0.2/0.03/42a0.92 0%, L0.22/0.03/42a0.55 38%, transparen
+<div>  | pos:absolute p:26px 24px 28px disp:flex dir:column gap:12px
+  <span>  | w:44px h:44px r:50% bg:L0.965/0.02/85a0.16 bd:1px solid L0.96/0.02/85a0.35 disp:flex
+    <svg> 
+      <path> 
+    <path> 
+<span>  | ff:Archivo, sans-serif fw:700 fs:21px lh:1.15 c:L0.97/0.015/85  >>CACAU
+<span>  | fs:14.5px lh:1.5 c:L0.88/0.02/82  >>Sabor intenso, naturalmente rico em antioxidantes.
+<div>  | pos:relative h:540px r:20px bg:L0.34/0.04/42
+  <image-slot> id=essencia-acai src=94f9651b-cd7e-4833-8c72-eac256a433c5 placeholder=Solte a foto de açaí | pos:absolute inset:0 w:100% h:100%
+<div>  | pos:absolute inset:0 bg:linear-gradient(to top, L0.2/0.03/42a0.92 0%, L0.22/0.03/42a0.55 38%, transparen
+<div>  | pos:absolute p:26px 24px 28px disp:flex dir:column gap:12px
+  <span>  | w:44px h:44px r:50% bg:L0.965/0.02/85a0.16 bd:1px solid L0.96/0.02/85a0.35 disp:flex
+    <svg> 
+      <circle> 
+    <circle> 
+  <path> 
+<path> 
+<span>  | ff:Archivo, sans-serif fw:700 fs:21px lh:1.15 c:L0.97/0.015/85  >>AÇAÍ
+<span>  | fs:14.5px lh:1.5 c:L0.88/0.02/82  >>Aproveitamento integral, do fruto ao novo produto.
+<div> id=produto | p:24px 40px 104px
+  <div>  | maxw:1280px m:0 auto disp:grid cols:minmax(0, 1.05fr) minmax(0, 0.95fr) gap:72px
+    <div>  | pos:relative r:22px bg:L0.93/0.035/100 ar:1 / 1
+      <image-slot> id=produtos-trio src=146836a4-af87-40aa-b93b-307bec34d888 placeholder=Solte a foto dos três produtos | pos:absolute inset:0 w:100% h:100%
+  <div>  | disp:flex dir:column gap:26px
+    <span>  | ff:'JetBrains Mono', monospace fs:11px ls:0.16em tt:uppercase c:L0.45/0.11/40  >>03 · linha completa
+    <h2>  | ff:Anton, sans-serif fw:400 fs:46px lh:1 ls:-0.02em m:0 c:L0.27/0.03/42  >>Conheça nossos produtos
+    <p>  | m:0 fs:16.5px lh:1.6 c:L0.45/0.02/45 maxw:46ch  >>Três versões feitas a partir do caroço do açaí, todas em embalagem de 
+    <div>  | disp:flex dir:column
+      <sc-for> list={{ produtos }} as=p
+        <div>  | disp:grid cols:34px minmax(0, 1fr) gap:20px p:22px 0
+          <span>  | ff:'JetBrains Mono', monospace fs:12px c:L0.45/0.11/40  >>{{ p.n }}
+          <div>  | disp:flex dir:column gap:7px
+            <span>  | ff:Archivo, sans-serif fw:700 fs:19px lh:1.15 c:L0.27/0.03/42  >>{{ p.nome }}
+            <span>  | fs:15px lh:1.55 c:L0.47/0.02/45  >>{{ p.desc }}
+<div> id=origem | bg:L0.26/0.03/42 c:L0.96/0.02/85 p:96px 40px
+  <div>  | maxw:1280px m:0 auto disp:grid cols:1fr 1fr gap:72px
+    <div>  | h:560px r:20px bg:repeating-linear-gradient(135deg, L0.4/0.05/40 0 10px, L0.35/0.05/40 10px 20px) disp:flex
+      <span>  | ff:'JetBrains Mono', monospace fs:12px c:L0.92/0.025/85 lh:1.7  >>[ FOTO: ORIGEM ]produção familiar · retrato 4:5
+    <div>  | disp:flex dir:column gap:24px
+      <span>  | ff:'JetBrains Mono', monospace fs:11px ls:0.16em tt:uppercase c:L0.76/0.13/118  >>03 · origem
+      <h2>  | ff:Anton, sans-serif fw:400 fs:46px lh:1.02 ls:-0.03em m:0  >>Orgânico, de produção familiar
+      <p>  | m:0 fs:16.5px lh:1.6 c:L0.85/0.025/80 maxw:52ch  >>Três a quatro linhas sobre as famílias produtoras, o manejo orgânico e
+      <div>  | disp:flex dir:column
+        <sc-for> list={{ etapas }} as=e
+          <div>  | disp:flex gap:20px p:18px 0
+            <span>  | ff:'JetBrains Mono', monospace fs:12px c:L0.74/0.13/118 w:30px  >>{{ e.n }}
+            <div>  | disp:flex dir:column gap:5px
+              <span>  | ff:Archivo, sans-serif fw:700 fs:17px  >>{{ e.titulo }}
+              <span>  | fs:14px lh:1.5 c:L0.8/0.02/70  >>Uma linha descrevendo a etapa do processo.
+<sc-if> 
+  <div>  | maxw:1280px m:0 auto p:96px 40px disp:flex dir:column gap:32px
+    <div>  | disp:flex gap:40px
+      <div>  | disp:flex dir:column gap:14px
+        <span>  | ff:'JetBrains Mono', monospace fs:11px ls:0.16em tt:uppercase c:L0.4/0.1/320  >>04 · depoimentos
+        <h2>  | ff:Anton, sans-serif fw:400 fs:44px lh:1.02 ls:-0.03em m:0  >>Quem já vende
+      <span>  | ff:'JetBrains Mono', monospace fs:11px c:L0.55/0.02/45  >>3 depoimentos
+    <div>  | disp:grid cols:repeat(3, 1fr) gap:16px
+      <sc-for> list={{ depoimentos }} as=d
+        <div>  | bd:1px solid L0.89/0.015/75 r:18px p:28px bg:L0.99/0.014/85 disp:flex dir:column gap:24px
+          <span>  | ff:Archivo, sans-serif fs:18px lh:1.45 c:L0.3/0.02/45  >>“Citação do parceiro em três linhas, falando do resultado obtido com o
+          <div>  | disp:flex gap:12px
+            <div>  | w:40px h:40px r:999px bg:repeating-linear-gradient(45deg, L0.7/0.03/60 0 5px, L0.76/0.03/60 5px 10px)
+            <div>  | disp:flex dir:column
+              <span>  | fs:14px fw:600  >>{{ d.nome }}
+              <span>  | ff:'JetBrains Mono', monospace fs:10px c:L0.55/0.02/45  >>{{ d.papel }}
+<div> id=instagram | bg:L0.945/0.028/85 p:96px 40px
+  <div>  | maxw:1280px m:0 auto disp:flex dir:column gap:32px
+    <div>  | disp:flex gap:40px
+      <div>  | disp:flex dir:column gap:12px
+        <span>  | ff:'JetBrains Mono', monospace fs:11px ls:0.16em tt:uppercase c:L0.4/0.1/320  >>05 · instagram
+        <h2>  | ff:Anton, sans-serif fw:400 fs:52px lh:1 ls:-0.035em m:0  >>@perfil
+      <div>  | disp:flex gap:20px
+        <span>  | ff:'JetBrains Mono', monospace fs:11px c:L0.5/0.02/45 lh:1.6  >>posts em destaque6 imagens
+        <div>  | p:14px 24px r:999px bg:L0.24/0.02/45 c:L0.965/0.02/85 fw:600 fs:15px  >>Seguir no Instagram
+    <div>  | disp:grid cols:repeat(6, 1fr) gap:12px
+      <sc-for> list={{ galeria }} as=g
+        <div>  | ar:1 / 1 r:12px bg:repeating-linear-gradient(135deg, L0.72/0.03/65 0 8px, L0.78/0.03/65 8px 16px) disp:flex
+          <span>  | ff:'JetBrains Mono', monospace fs:10px c:L0.3/0.02/45  >>{{ g.label }}
+<div> id=contato | bg:L0.22/0.03/42 c:L0.965/0.02/85 p:64px 40px
+  <div>  | maxw:1040px m:0 auto disp:grid cols:1.2fr minmax(0, 0.8fr) gap:48px
+    <div>  | disp:flex dir:column gap:28px
+      <span>  | ff:'JetBrains Mono', monospace fs:11px ls:0.16em tt:uppercase c:L0.76/0.13/118  >>06 · contato
+      <h2>  | ff:Anton, sans-serif fw:400 fs:48px lh:1.02 ls:-0.035em m:0  >>Fale com a gente pelo WhatsApp
+      <div>  | disp:flex dir:column gap:16px
+        <sc-for> list={{ contatos }} as=c
+          <div>  | disp:flex gap:16px p:16px 0
+            <div>  | w:40px h:40px r:10px bg:L0.34/0.03/45 disp:flex
+              <span>  | ff:'JetBrains Mono', monospace fs:9px c:L0.8/0.02/70  >>ico
+            <div>  | disp:flex dir:column gap:3px
+              <span>  | ff:'JetBrains Mono', monospace fs:10px ls:0.1em tt:uppercase c:L0.68/0.02/60  >>{{ c.rotulo }}
+              <span>  | fs:16px fw:500  >>{{ c.valor }}
+      <div>  | p:20px 36px r:999px bg:L0.62/0.13/118 c:L0.2/0.02/45 ff:Anton, sans-serif fw:400 fs:19px ls:-0.01em  >>Falar no WhatsApp
+    <div>  | h:300px r:16px bg:repeating-linear-gradient(135deg, L0.32/0.02/45 0 10px, L0.29/0.02/45 10px 20px) disp:flex
+      <span>  | ff:'JetBrains Mono', monospace fs:12px c:L0.85/0.025/80 lh:1.7  >>[ MAPA ou FOTO ]Sergipe · Brasil
+<div>  | bg:L0.17/0.02/45 c:L0.72/0.02/70 p:32px 40px
+  <div>  | maxw:1280px m:0 auto disp:flex gap:40px
+    <div>  | w:60px h:60px r:999px bg:L0.965/0.02/85 disp:flex
+      <img> src=0aa096cd-8fc8-48a3-a74b-50bff7d84f49 alt=Açaí Raiz | h:52px w:auto
+    <div>  | disp:flex gap:26px
+      <a> href=#produto | fs:13px c:L0.72/0.02/70  >>O produto
+      <a> href=#origem | fs:13px c:L0.72/0.02/70  >>Origem
+      <a> href=#instagram | fs:13px c:L0.72/0.02/70  >>Instagram
+      <a> href=#contato | fs:13px c:L0.72/0.02/70  >>Contato
+    <span>  | ff:'JetBrains Mono', monospace fs:10px c:L0.5/0.02/60  >>© 2026 · Sergipe, Brasil
+<script> 
+  'class Component extends DCLogic {'
+  'state = { idioma: "PT" };'
+  'componentDidMount() {'
+  'const cena = document.getElementById("hero-cena");'
+  'if (!cena) return;'
+  'this._alvos = Array.from(cena.querySelectorAll("[data-depth]"));'
+  'this._mover = (e) => {'
+  'const r = cena.getBoundingClientRect();'
+  'const x = (e.clientX - r.left) / r.width - 0.5;'
+  'const y = (e.clientY - r.top) / r.height - 0.5;'
+  'for (const el of this._alvos) {'
+  'const d = parseFloat(el.dataset.depth) || 0;'
+  'el.style.translate = (-x * d) + "px " + (-y * d) + "px";'
+  'el.style.transition = "translate .4s cubic-bezier(.2,.7,.3,1)";'
+  '}'
+  '};'
+  'this._sair = () => { for (const el of this._alvos) el.style.translate = "0px 0px'
+  'cena.addEventListener("mousemove", this._mover);'
+  'cena.addEventListener("mouseleave", this._sair);'
+  'this._cena = cena;'
+  '}'
+  'componentWillUnmount() {'
+  'if (this._cena) {'
+  'this._cena.removeEventListener("mousemove", this._mover);'
+  'this._cena.removeEventListener("mouseleave", this._sair);'
+  '}'
+  '}'
+  'renderVals() {'
+  'return {'
+  'idiomas: ["PT", "ES", "EN"].map(sigla => ({'
+  'sigla,'
+  'fundo: this.state.idioma === sigla ? "oklch(0.99 0.014 85)" : "transparent",'
+  'cor: this.state.idioma === sigla ? "oklch(0.28 0.02 45)" : "oklch(0.55 0.02 45)"'
+  'selecionar: () => this.setState({ idioma: sigla })'
+  '})),'
+  'mostrarStats: this.props.mostrarStats ?? true,'
+  'mostrarDepoimentos: this.props.mostrarDepoimentos ?? true,'
+  'stats: ['
+  '{ num: "3", label: "Produtos inovadores" },'
+  '{ num: "30 +", label: "Parceiros ativos" },'
+  '{ num: "5 +", label: "Toneladas por ano" },'
+  '{ num: "3500 +", label: "Produtos vendidos" }'
+  '],'
+  'ingredientes: ['
+  '{ tag: "MATÉRIA-PRIMA", nome: "Grão de açaí" },'
+  '{ tag: "BLEND", nome: "Cacau" },'
+  '{ tag: "BLEND", nome: "Café" },'
+  '{ tag: "PROCESSO", nome: "Torra" }'
+  '],'
+  'beneficiosEsq: ['
+  '{ titulo: "Sem cafeína" }, { titulo: "Antioxidantes" }, { titulo: "Fibras" }'
+  '],'
+  'beneficiosDir: ['
+  '{ titulo: "Sabor único" }, { titulo: "Aproveitamento integral" }, { titulo: "Org'
+  '],'
+  'produtos: ['
+  '{ n: "01", tag: "PURO", nome: "Café do grão de açaí", desc: "100% caroço de açaí'
+  '{ n: "02", tag: "BLEND", nome: "Blend cacau e açaí", desc: "Açaí com cacau puro.'
+  '{ n: "03", tag: "BLEND", nome: "Blend café e açaí", desc: "Açaí com café arábica'
+  '],'
+  'etapas: ['
+  '{ n: "01", titulo: "Colheita familiar" },'
+  '{ n: "02", titulo: "Aproveitamento do caroço" },'
+  '{ n: "03", titulo: "Torra artesanal" },'
+  '{ n: "04", titulo: "Envase e envio" }'
+  '],'
+  'depoimentos: ['
+  '{ nome: "Nome do parceiro", papel: "cafeteria · cidade" },'
+  '{ nome: "Nome do parceiro", papel: "mercado · cidade" },'
+  '{ nome: "Nome do parceiro", papel: "distribuidor · cidade" }'
+  '],'
+  'galeria: [1, 2, 3, 4, 5, 6].map(n => ({ label: "[img " + n + "]" })),'
+  'contatos: ['
+  '{ rotulo: "e-mail", valor: "contato@marca.com.br" },'
+  '{ rotulo: "localização", valor: "Sergipe · Brasil" },'
+  '{ rotulo: "whatsapp", valor: "+55 (79) 0 0000-0000" }'
+  ']'
+  '};'
+  '}'
+  '}'

@@ -1,103 +1,163 @@
+@AGENTS.md
+
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Site da **Açaí Raiz**, produtora de café e blends feitos do caroço do açaí, em
+Sergipe. Next 16 (App Router, Turbopack), React 19, TypeScript, Tailwind v4,
+shadcn/ui e next-intl. Conteúdo em pt-BR e identificadores em português.
 
-## Atenção: o repo tem dois sites
-
-| Onde | O quê | Status |
-|---|---|---|
-| raiz (este arquivo) | `index.html` estático, `en/`, `es/`, `tools/build-i18n.py` | **É o que está no ar** em www.acairaiz.com |
-| `web/` | Reconstrução em Next 16 + Tailwind + shadcn/ui + next-intl | Em construção, só na URL `.vercel.app` |
-
-O resto deste arquivo descreve **o site da raiz**. Para mexer na reconstrução,
-leia `web/CLAUDE.md` — a stack, o i18n e as convenções são outras.
-
-Como decidir: correção urgente de conteúdo que precisa ir ao ar hoje é aqui na
-raiz. Qualquer coisa do redesign é em `web/`. Enquanto o DNS não mudar, editar
-só `web/` não muda nada em www.acairaiz.com.
-
-## Visão geral
-
-Site institucional/vitrine da **Açaí Raiz**, produtora de polpa de açaí e cafés do grão de açaí em Sergipe. Site estático puro (HTML/CSS/JS), sem build, sem dependências, sem framework. Todo o conteúdo é em pt-BR e os identificadores no código também são em português (`produtos`, `carrinho`, `compras`, `depoimentos`).
-
-Não há checkout próprio: o "carrinho" monta uma mensagem de texto e abre o WhatsApp da loja. Toda conversão termina no WhatsApp ou no Instagram.
+**O site é B2B: capta revendedores.** A conversão é "Seja parceiro" / falar no
+WhatsApp. **Não existe carrinho nem preço** — o site antigo tinha os dois, o
+design novo não, e foi uma decisão explícita do dono. Se for reintroduzir
+preço, pergunte antes.
 
 ## Comandos
 
-Não há lint, test runner nem `package.json`. Nada a instalar — o build usa só a stdlib do Python.
-
 ```bash
-# Regera en/ e es/ a partir do index.html. RODAR SEMPRE que mexer em texto.
-python3 tools/build-i18n.py
-
-# Preview local (necessário para o legado em js/, que usa ES modules e quebra em file://)
-python3 -m http.server 8000    # http://localhost:8000
-
-# Deploy: GitHub Pages serve a branch main na raiz do repo
-git push origin main            # publica em www.acairaiz.com (ver CNAME)
+npm run dev      # http://localhost:3000
+npm run build
+npm run lint
+npx shadcn@latest add <componente>
 ```
 
-Não há ambiente de staging — **push na `main` é deploy em produção.**
+## Deploy
 
-## i18n: o site tem 3 idiomas gerados de uma fonte só
+Vercel. **O domínio www.acairaiz.com ainda não aponta para cá** — apontar o DNS
+é o passo de lançamento, e só o usuário decide quando.
 
-`index.html` é ao mesmo tempo **a fonte e o site em português** — é o único HTML editado à mão. `tools/build-i18n.py` lê ele mais `i18n/en.json` e `i18n/es.json` e escreve `en/index.html` e `es/index.html`. O script **nunca escreve no `index.html`**.
+O `CNAME` na raiz é resquício do GitHub Pages, que servia o site antigo.
+Continua versionado de propósito: apagá-lo desvincula o domínio nas
+configurações do GitHub. Não atrapalha a Vercel.
 
-**Editar `en/index.html` ou `es/index.html` à mão não adianta — o próximo build sobrescreve.** Ambos começam com um comentário avisando disso.
+## Design
 
-Como marcar texto traduzível:
+`docs/design.md` diz de onde veio o design, o que ele definiu, o que foi
+adaptado para mobile e **o inventário do que ainda é texto placeholder**.
+Leia antes de mexer em layout ou de escrever conteúdo.
 
-```html
-<h1 data-i18n="hero.title">O café feito do<br /><em>grão do açaí</em></h1>
+## i18n
+
+Três idiomas: `pt` (padrão), `en`, `es`. Configuração em `src/i18n/`:
+
+- `routing.ts` — `localePrefix: "as-needed"`. PT na raiz (`/`), EN em `/en`, ES
+  em `/es`, preservando as URLs que o site antigo já tinha indexadas. Aqui
+  moram também `HTML_LANG` e `caminhoDoLocale`, usados pelo layout e pelo
+  `sitemap.ts` — não duplique nenhum dos dois.
+- `request.ts` — o locale vem de **`next/root-params`**, não do `requestLocale`
+  do next-intl, deprecado desde o Next 16. `timeZone` fixo em `America/Maceio`.
+- `navigation.ts` — **navegue sempre pelo `Link`/`redirect` daqui**, nunca por
+  `next/link` ou `next/navigation`.
+- `src/proxy.ts` — no Next 16 o antigo `middleware.ts` chama-se `proxy.ts`.
+- `src/global.d.ts` — declara `Messages` a partir de `messages/pt.json`, então
+  `t("hero.titl")` é erro de compilação. **Chave nova entra nos três arquivos.**
+
+### Traduções carregam marcação, e a sintaxe é ICU (não HTML)
+
+1. **Não existe tag autofechada.** É `<br></br>`, nunca `<br />` — o next-intl
+   escapa a segunda e o visitante lê `&lt;br/&gt;` na tela.
+2. **Tag não leva atributo.** O `href` fica no código: a mensagem diz
+   `<link>texto</link>` e o componente resolve com `linkExterno(url, chunks)`.
+
+Use `t.rich(chave, TAGS)` com os callbacks de `src/i18n/rich.tsx`. Nunca
+`dangerouslySetInnerHTML`.
+
+## Dado versus tradução
+
+A regra que organiza o projeto inteiro: **número, id, ordem e nome próprio são
+dado; todo o resto é tradução.**
+
+- `src/lib/produtos.ts` — os três produtos: `id`, `n`, `tag`, `nome`. O **nome
+  não traduz**, é o que está impresso na embalagem. A descrição vem de
+  `produtos.itens.<id>.desc`.
+- `src/lib/conteudo.ts` — números da seção "Nossos números", pilares da
+  essência, etapas da origem, quadros do Instagram. Só valor e id; rótulo e
+  título vêm das mensagens pelo mesmo id.
+- `src/lib/site.ts` — WhatsApp `5579991198907`, Instagram `@acairaiz20`,
+  e-mail (que tem mesmo o "ai" trocado — **não "corrija"**) e a reportagem do
+  Sergipe Rural, que começa em 424s porque a matéria sobre a Açaí Raiz só
+  aparece aos 7:04 do programa.
+
+O motivo é concreto: no site antigo o preço vivia em três lugares
+independentes e o terceiro já tinha divergido em silêncio. Um id em um lugar
+só evita a classe inteira desse bug.
+
+## Estilo
+
+- Paleta no `@theme` de `src/app/globals.css`, em oklch, direto do design:
+  `creme`, `creme-claro`, `areia` (fundos claros); `casca`, `casca-escura`,
+  `noite` (fundos escuros); `tinta`, `tinta-suave`, `tinta-clara` (texto);
+  `folha` (verde dos CTAs), `terra`, `broto`, `uva` (eyebrows); `borda`.
+  **Nunca escreva uma cor direto num componente.**
+- Fontes: `font-display` (Anton, títulos), `font-rotulo` (Archivo, rótulos
+  fortes), `font-sans` (Instrument Sans, corpo), `font-mono` (JetBrains Mono,
+  eyebrows).
+- Os tokens semânticos do shadcn já apontam para a marca, então componente
+  novo do shadcn nasce na paleta certa.
+- Não há modo escuro: nada adiciona a classe `.dark`.
+- O vídeo do contato é um *facade* (`video-reportagem.tsx`): até o clique é só
+  o poster, e nenhum byte sai para o YouTube. Todo embed de terceiro que entrar
+  no site deve seguir esse padrão.
+- **Animação segue duas regras**, valendo para o paralaxe do hero
+  (`cena-hero.tsx`) e a contagem dos números (`contador.tsx`): o HTML do
+  servidor já traz o estado final, para que sem JS a página continue correta; e
+  nada se move sob `prefers-reduced-motion: reduce`. Animação nova entra assim.
+- `src/components/eyebrow.tsx` tem os dois primitivos repetidos em toda seção:
+  `<Eyebrow>` (o rótulo em mono) e `<Faixa>` (a largura de 1280px).
+- Uma seção por arquivo em `src/components/secoes/`, na ordem da página.
+
+**Cuidado com token inexistente:** o Tailwind descarta a classe em silêncio, e
+a página fica sem estilo naquele ponto sem nenhum erro. Depois de mexer em
+cores, vale conferir que a classe saiu no CSS compilado.
+
+## Imagens
+
+**As imagens ficam em `src/assets/` e entram por import estático**, nunca por
+caminho de string em `public/`:
+
+```tsx
+import xicara from "@/assets/hero-xicara.png";
+<Image src={xicara} alt={...} priority />
 ```
 
-O valor no dicionário é **HTML, não texto puro**, então `<br>` e `<em>` vêm da própria tradução. Para atributos existe `data-i18n-alt` e `data-i18n-aria-label`. Toda string nova em PT precisa da chave nos dois JSON, senão o build falha com a lista do que falta (de propósito — chave silenciosamente ausente vira página meio traduzida em produção).
+Isso não é preferência de estilo — é o que faz a troca de imagem funcionar.
+O ETag do otimizador de imagem do Next varia por caminho e por largura, **mas
+não pelo conteúdo do arquivo**: com `src="/design/foo.png"`, trocar o arquivo
+mantém a URL e o ETag, o navegador recebe `304 Not Modified` e continua
+mostrando a foto velha — em dev e em produção. O import estático põe um hash
+do conteúdo na URL (`hero-xicara.1tyjyc_yloqnp.png`), então conteúdo novo é
+URL nova e o problema deixa de existir.
 
-Decisões embutidas no arranjo:
+De quebra o import traz as dimensões, então dá para dispensar o `fill` e deixar
+a caixa seguir a proporção da imagem — trocar por uma foto de outro formato não
+exige mexer em código.
 
-- **Nome de produto não traduz** ("Café do grão de açaí" está impresso na embalagem). Só a descrição.
-- **A mensagem do pedido no WhatsApp é sempre em português**, em qualquer idioma do site — quem lê é a atendente. Só o alerta de carrinho vazio é traduzido, via o objeto `I18N` que o build injeta entre os marcadores `/* I18N:JS */`.
-- Os marcadores `<!-- I18N:HREFLANG -->` e `/* I18N:JS */` são **pareados** e devem sobreviver no `index.html`: é o que torna o build idempotente. Apagar um quebra o script.
-- `.prettierignore` exclui `en/` e `es/` para o Prettier não reformatar arquivo gerado.
+`fotos-originais/` é material bruto que **não é servido**: os JPEGs de câmera de
+celular do site antigo (`instagram-2.jpg` tem 8,9 MB em 3072×4080 e era exibida
+num quadrado de 200px) mais os originais em tamanho cheio das fotos do design.
 
-## Arquitetura: duas gerações de site convivendo
+**Nada entra em `src/assets/` sem ser redimensionado antes**: lado maior
+≤ 2000px. Guarde o original em `fotos-originais/` se ele tiver valor.
 
-Esta é a coisa mais importante a entender antes de editar qualquer arquivo.
+## Onde mais olhar
 
-### Geração atual — `index.html` (é só esse arquivo)
+- `docs/design.md` — o design e o que ainda é placeholder.
+- `docs/historia-do-fundador.md` — a história em primeira pessoa (Belém do
+  Pará, primeiro plantio comercial de açaí em Sergipe em 2013 com sementes da
+  EMBRAPA-PA, frutificação em 2017). Material real para a seção Origem.
+- `docs/critical-workflow.md` — diagnóstico do site antigo priorizado por
+  impacto. Leia antes de propor melhoria de performance ou SEO.
 
-Página única autossuficiente, ~1770 linhas, sem nenhuma referência a `css/` ou `js/`:
+## Detalhes que surpreendem
 
-| Faixa | Conteúdo |
-|---|---|
-| ~11–1330 | Todo o CSS, inline em `<style>`. Design tokens em `:root` (`--acai`, `--cream`, `--gold`). Breakpoints em 768px, 900px, 540px |
-| 1333–1693 | Markup: nav, hero, produtos, depoimentos, instagram, contato, footer, painel do carrinho |
-| 1695–1770 | Todo o JS, inline em `<script>`. Sem módulos, sem imports — funções globais chamadas via `onclick` no HTML |
-
-O único outro arquivo que ela consome é `imgs/` (logo + 5 fotos do Instagram). A imagem do hero está **embutida como base64** na linha 1360, o que sozinho responde por 340 KB dos 395 KB do arquivo.
-
-### Geração legada — não referenciada por nada
-
-`css/`, `js/`, `json/produtos.json` e `missao.html` são da versão anterior do site e **estão mortos**: nenhuma página os carrega. O commit `cc0fd1b "new website"` substituiu tudo por `index.html` sem remover o antigo.
-
-- `js/script.js` era o entry point, importando 5 módulos ES (`carrinho-compras`, `modal-saibamais`, `scroll-animacao`, `scroll-suave`, `horario-funcionamenot` — o typo está no nome do arquivo)
-- `json/produtos.json` tinha os produtos como dados; a versão atual regrediu para produtos hardcoded no HTML
-- `missao.html` é órfã (nada linka pra ela), mas **contém conteúdo aproveitável**: a história do fundador — Belém do Pará, primeiro plantio comercial de açaí em Sergipe em 2013 com sementes da EMBRAPA-PA, primeira frutificação em 2017. O site atual não tem seção "sobre"
-
-Ao mexer no site, confirme que está editando `index.html`. Editar `css/geral.css` ou `js/modules/*` não tem efeito nenhum em produção.
-
-## Armadilhas conhecidas
-
-**Preço de produto vive em 3 lugares independentes.** Para cada produto, o preço aparece no card (`.produto-preco`), no item do carrinho (`.cart-item-size`) e como argumento de `changeQty(this, ±1, preco)`. O terceiro **já está divergente** (passa `25` onde o texto diz `R$ 27,00`) e passa despercebido porque a função ignora esse parâmetro: `updateTotal()` calcula o total fazendo **regex no texto renderizado** do `.cart-item-size`. Ao mudar qualquer preço, mude os três — ou, melhor, unifique numa fonte de dados só.
-
-**Nunca adicione imagem sem otimizar antes.** As fotos em `imgs/` são JPEGs originais de câmera de celular: `instagram-2.jpg` tem 8,9 MB em 3072×4080 e é exibida num quadrado de ~200px. O repo tem 59 MB e a página pesa ~25 MB por causa disso.
-
-**`id="logo"` está duplicado** (nav e footer) — HTML inválido; `getElementById` só enxerga o primeiro.
-
-**Fotos de produto existem mas não são usadas.** `imgs/acai-produto.png`, `cafe-de-acai-produto.png`, `blend-produto.png` e `licor-png.png` estão no repo; os cards de produto usam emoji (🫐 ☕ ✨) no lugar.
-
-**Sem `.gitignore`** — `.DS_Store` está versionado.
-
-## Backlog
-
-`critical-workflow.md` tem o diagnóstico completo do site (performance, SEO, acessibilidade, conversão) priorizado por impacto. Consulte antes de propor melhorias, para não sugerir o que já está mapeado.
+- `<Link locale="pt" href="/">` renderiza `href="/pt"`, que responde 307 para
+  `/`. É proposital do next-intl (garante o cookie de idioma). O `hreflang` do
+  `alternates` aponta para `/` — é o que o Google lê.
+- O seletor de idioma mostra **PT · ES · EN**, ordem do design, que não é a de
+  `routing.locales`. A ordem de exibição está no `cabecalho.tsx`.
+- O `[locale]` funciona como catch-all: `/qualquer-coisa` chega ao
+  `request.ts`. Por isso o `hasLocale` com fallback para o `defaultLocale`.
+- `robots.ts` e `sitemap.ts` ficam em `src/app/`, fora do `[locale]`. O matcher
+  do `proxy.ts` ignora caminhos com ponto, então os dois passam direto.
+- **O site antigo foi removido.** Era HTML estático servido pelo GitHub Pages
+  na raiz da `main`, e está no histórico do git (último commit com ele:
+  `16df93d`) — inclusive `tools/build-i18n.py`, `index.html`, `en/` e `es/`.

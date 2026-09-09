@@ -1,0 +1,156 @@
+{
+  "head": {
+    "title": "Açaí Raiz | Coffee made from the açaí seed, produced in Sergipe",
+    "desc": "We turn the açaí seed into coffee and cacao and coffee blends. Organic family farming in Sergipe, with domestic and international shipping."
+  },
+  "lang": {
+    "aria": "Choose language"
+  },
+  "nav": {
+    "logoAlt": "Açaí Raiz",
+    "produtos": "Products",
+    "beneficios": "Benefits",
+    "contato": "Contact",
+    "cta": "Become a partner",
+    "abrirMenu": "Open menu",
+    "fecharMenu": "Close menu"
+  },
+  "hero": {
+    "eyebrow": "Produced in Sergipe",
+    "titulo": "The coffee made<br></br>from the açaí seed.",
+    "sub": "Bring a new way of enjoying açaí to your business: natural, innovative, and surprising.",
+    "ctaPrimario": "I want to be a partner",
+    "ctaSecundario": "See products",
+    "entregas": "Domestic and international shipping",
+    "xicaraAlt": "A cup of açaí seed coffee, with beans and seeds around it",
+    "selos": {
+      "organico": "100% organic",
+      "energia": "Source of energy",
+      "brasileiro": "Brazilian product"
+    }
+  },
+  "numeros": {
+    "titulo": "Our numbers",
+    "sub": "Growing production, with partners in Brazil and abroad.",
+    "produtos": "Innovative products",
+    "parceiros": "Active partners",
+    "toneladas": "Tonnes per year",
+    "vendidos": "Products sold"
+  },
+  "essencia": {
+    "eyebrow": "Our essence",
+    "titulo": "Natural by origin.<br></br>Innovative by nature.",
+    "desc": "We turn natural ingredients into new experiences, with innovation, whole-fruit use and purpose in every product.",
+    "cafe": {
+      "titulo": "COFFEE",
+      "desc": "Energy to start the day differently.",
+      "alt": "Roasted coffee beans"
+    },
+    "cacau": {
+      "titulo": "CACAO",
+      "desc": "Intense flavour, naturally rich in antioxidants.",
+      "alt": "Cacao beans"
+    },
+    "acai": {
+      "titulo": "AÇAÍ",
+      "desc": "Whole-fruit use, from the berry to a new product.",
+      "alt": "Açaí berries on the branch"
+    }
+  },
+  "produtos": {
+    "eyebrow": "full range",
+    "titulo": "Meet our products",
+    "sub": "Three versions made from the açaí seed, all in 250g packs, ground and ready to brew.",
+    "trioAlt": "The three 250g packs of the Açaí Raiz range",
+    "itens": {
+      "cafe-grao": {
+        "desc": "100% roasted and ground açaí seed. Caffeine free, with a woody flavour and reddish colour."
+      },
+      "blend-cacau": {
+        "desc": "Açaí with pure cacao. More intense in aroma and naturally rich in antioxidants."
+      },
+      "blend-cafe": {
+        "desc": "Açaí with arabica coffee. Keeps the caffeine of coffee with the smooth body of açaí."
+      }
+    }
+  },
+  "origem": {
+    "eyebrow": "origin",
+    "titulo": "Organic, from family farming",
+    "desc": "Three or four lines about the farming families, the organic management and the whole-fruit use.",
+    "fotoAlt": "Family farming in the açaí grove",
+    "fotoLegenda": "[ PHOTO: ORIGIN ]<br></br>family farming · portrait 4:5",
+    "etapas": {
+      "colheita": {
+        "titulo": "Family harvest",
+        "desc": "The açaí is hand-picked, respecting the fruit’s natural cycle and taking care of the land."
+      },
+      "caroco": {
+        "titulo": "Seed recovery",
+        "desc": "After the pulp is extracted, the seed is separated and repurposed, giving a new use to an essential part of the fruit."
+      },
+      "torra": {
+        "titulo": "Artisanal roasting",
+        "desc": "The seed is carefully roasted using an artisanal process, transforming the fruit into a drink with a unique flavor, aroma, and character."
+      },
+      "envase": {
+        "titulo": "Packing and shipping",
+        "desc": "Once prepared, the product is carefully packaged and shipped directly from our family production to your home."
+      }
+    }
+  },
+  "depoimentos": {
+    "eyebrow": "testimonials",
+    "titulo": "Who already sells it",
+    "contagem": "3 testimonials",
+    "um": {
+      "citacao": "A partner quote in three lines, about the results they got with the product.",
+      "nome": "Partner name",
+      "papel": "coffee shop · city"
+    },
+    "dois": {
+      "citacao": "A partner quote in three lines, about the results they got with the product.",
+      "nome": "Partner name",
+      "papel": "grocery · city"
+    },
+    "tres": {
+      "citacao": "A partner quote in three lines, about the results they got with the product.",
+      "nome": "Partner name",
+      "papel": "distributor · city"
+    }
+  },
+  "instagram": {
+    "eyebrow": "instagram",
+    "cta": "Follow on Instagram",
+    "fotos": {
+      "prateleira": "The cacao and açaí blend pack on a coffee shop shelf",
+      "trioMesa": "The three packs on a wooden table, among coffee beans and açaí berries",
+      "acaizeiro": "An açaí palm loaded with fruit clusters, seen from below against the sky",
+      "tigela": "A bowl of blended açaí next to a sign reading Açaí Raiz",
+      "trio": "The three 250g packs of the Açaí Raiz range",
+      "frutos": "Açaí berries and cleaned seeds side by side on wood"
+    }
+  },
+  "contato": {
+    "eyebrow": "contact",
+    "titulo": "Talk to us on WhatsApp",
+    "cta": "Message us on WhatsApp",
+    "email": "e-mail",
+    "local": "location",
+    "localVal": "Sergipe · Brazil",
+    "whatsapp": "whatsapp"
+  },
+  "rodape": {
+    "produto": "The product",
+    "origem": "Origin",
+    "instagram": "Instagram",
+    "contato": "Contact",
+    "copy": "© 2026 · Sergipe, Brazil"
+  },
+  "video": {
+    "eyebrow": "TV report",
+    "titulo": "Sergipe Rural visits Açaí Raiz",
+    "aria": "Watch the Sergipe Rural report about Açaí Raiz on YouTube",
+    "posterAlt": "A scene from the Sergipe Rural report filmed at the açaí grove"
+  }
+}
