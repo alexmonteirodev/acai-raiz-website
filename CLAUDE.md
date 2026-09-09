@@ -2,6 +2,20 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Atenção: o repo tem dois sites
+
+| Onde | O quê | Status |
+|---|---|---|
+| raiz (este arquivo) | `index.html` estático, `en/`, `es/`, `tools/build-i18n.py` | **É o que está no ar** em www.acairaiz.com |
+| `web/` | Reconstrução em Next 16 + Tailwind + shadcn/ui + next-intl | Em construção, só na URL `.vercel.app` |
+
+O resto deste arquivo descreve **o site da raiz**. Para mexer na reconstrução,
+leia `web/CLAUDE.md` — a stack, o i18n e as convenções são outras.
+
+Como decidir: correção urgente de conteúdo que precisa ir ao ar hoje é aqui na
+raiz. Qualquer coisa do redesign é em `web/`. Enquanto o DNS não mudar, editar
+só `web/` não muda nada em www.acairaiz.com.
+
 ## Visão geral
 
 Site institucional/vitrine da **Açaí Raiz**, produtora de polpa de açaí e cafés do grão de açaí em Sergipe. Site estático puro (HTML/CSS/JS), sem build, sem dependências, sem framework. Todo o conteúdo é em pt-BR e os identificadores no código também são em português (`produtos`, `carrinho`, `compras`, `depoimentos`).

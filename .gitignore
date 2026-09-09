@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Node / Next (projeto em web/)
+node_modules/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+
+# variaveis de ambiente
+.env
+.env*.local
