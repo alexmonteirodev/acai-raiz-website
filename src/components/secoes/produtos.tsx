@@ -11,7 +11,7 @@ export function Produtos() {
   return (
     <section id="produto" className="pt-6 pb-20 lg:pb-26">
       <Faixa className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-[72px] ">
-        <div className="relative aspect-square overflow-hidden rounded-[22px]">
+        <div className="relative aspect-square overflow-hidden rounded-[22px] order-2 lg:order-1">
           <Image
             src={trio}
             alt={t("trioAlt")}
@@ -20,7 +20,7 @@ export function Produtos() {
           />
         </div>
 
-        <div className="flex flex-col gap-6 ">
+        <div className="flex flex-col gap-6 order-1 lg:order-2">
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="m-0 font-display text-[38px] leading-none tracking-[-0.02em] text-balance text-tinta lg:text-[46px] ">
             {t("titulo")}

@@ -31,19 +31,19 @@ export function Hero() {
           <div className="mt-1 flex flex-wrap gap-3 ">
             <a
               href="#contato"
-              className="rounded-full bg-folha px-7 py-4 text-[15px] font-bold text-white transition-opacity hover:opacity-90"
+              className="rounded-full bg-folha px-7 py-4 text-[15px] font-bold text-white transition-opacity hover:opacity-90 z-10"
             >
               {t("ctaPrimario")}
             </a>
             <a
               href="#produto"
-              className="rounded-full border border-[oklch(0.78_0.03_60)] px-7 py-4 text-[15px] font-semibold text-tinta-suave transition-colors hover:border-tinta hover:text-tinta"
+              className="rounded-full border border-[oklch(0.78_0.03_60)] px-7 py-4 text-[15px] font-semibold text-tinta-suave transition-colors hover:border-tinta hover:text-tinta bg-[#EBEAC9] z-10"
             >
               {t("ctaSecundario")}
             </a>
           </div>
 
-          <p className="mt-1.5 flex items-center gap-2.5 text-[16px] text-tinta-suave">
+          <p className="mt-1.5 flex items-center gap-2.5 text-[16px] text-tinta-suave z-10">
             <Globe
               className="size-[18px] text-[oklch(0.45_0.11_130)]"
               strokeWidth={1.7}

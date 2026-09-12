@@ -88,11 +88,7 @@ export function CenaHero() {
       <span className="absolute top-[16%] right-[10%] size-1.5 rounded-full bg-[oklch(0.55_0.12_40)] shadow-[0_0_12px_4px_oklch(0.55_0.12_40/0.35)]" />
       <span className="absolute right-[24%] bottom-[10%] size-[5px] rounded-full bg-folha shadow-[0_0_10px_3px_oklch(0.62_0.13_118/0.35)]" />
 
-      {/* sem `fill`: o import estático traz as dimensões, então a caixa segue
-          a proporção da imagem sozinha. Trocar a foto por uma de outro formato
-          não exige mexer em código nem deixa faixa vazia. */}
-      <div className="absolute w-[650px] -right-[30]  lg:top-[310] lg:left-[325] z-4 lg:w-[950px] lg:-translate-1/2">
-        {/* <div className="absolute w-[550px] left-[0] lg:top-[340] lg:left-[325] z-4 lg:w-[750px] lg:-translate-1/2"> */}
+      <div className="absolute w-[750px] -right-[220px] -top-[50px] lg:top-[310] lg:left-[325] z-4 lg:w-[950px] lg:-translate-1/2">
         <Image
           src={xicara}
           alt={t("xicaraAlt")}
