@@ -37,6 +37,13 @@ serviu de referência de intenção, não de medida.
 O paralaxe dos selos do hero respeita `prefers-reduced-motion` e só reage a
 ponteiro — no toque a cena fica parada, como deve.
 
+Onde o artboard pedia uma foto fixa na Origem entrou um carrossel
+(`carrossel-origem.tsx`): cinco fotos da produção familiar em fade a cada 2s,
+dentro da mesma moldura 4:5. A primeira já vem visível no HTML do servidor,
+o relógio só anda com a moldura na tela, e sob `prefers-reduced-motion` ele
+não chega a começar — fica a primeira foto. Os pontos embaixo travam a
+passagem para quem clicar.
+
 ## Ainda é placeholder do design
 
 Estes textos vieram do design como exemplo e esperam o conteúdo real. Todos
@@ -46,7 +53,6 @@ saem de `messages/{pt,en,es}.json` — não é preciso mexer em componente.
 |---|---|---|
 | Origem | `origem.desc` | "Três a quatro linhas sobre as famílias produtoras…" |
 | Origem | `origem.etapas.*.desc` | "Uma linha descrevendo a etapa do processo." |
-| Origem | `origem.fotoLegenda` | O bloco listrado espera a foto da produção familiar |
 | Depoimentos | `depoimentos.*` | Citação, nome e papel dos três parceiros |
 
 `historia-do-fundador.md`, neste mesmo diretório, tem material real que serve

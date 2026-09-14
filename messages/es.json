@@ -24,7 +24,7 @@
     "entregas": "Envíos nacionales e internacionales",
     "xicaraAlt": "Taza de café de açaí, con granos y semillas alrededor",
     "selos": {
-      "organico": "100% orgánico",
+      "organico": "100% natural",
       "energia": "Fuente de energía",
       "brasileiro": "Producto brasileño"
     }
@@ -67,7 +67,7 @@
         "desc": "100% hueso de açaí tostado y molido. Sin cafeína, con sabor amaderado y color rojizo."
       },
       "blend-cacau": {
-        "desc": "Açaí con cacao puro. Más intenso en el aroma y naturalmente rico en antioxidantes."
+        "desc": "Açaí con cacao puro. De aroma dulce más intenso y naturalmente rico en antioxidantes."
       },
       "blend-cafe": {
         "desc": "Açaí con café arábica. Mantiene la cafeína del café con el cuerpo suave del açaí."
@@ -76,10 +76,16 @@
   },
   "origem": {
     "eyebrow": "origen",
-    "titulo": "Orgánico, de producción familiar",
+    "titulo": "Agroecológico, de producción familiar",
     "desc": "Tres o cuatro líneas sobre las familias productoras, el manejo orgánico y el aprovechamiento integral del fruto.",
-    "fotoAlt": "Producción familiar en el açaizal",
-    "fotoLegenda": "[ FOTO: ORIGEN ]<br></br>producción familiar · retrato 4:5",
+    "fotos": {
+      "familiaAcaizal": "Dos generaciones de la familia sosteniendo racimos de açaí recién cosechados en medio del acaizal",
+      "familiaTerreiro": "Productor y una niña mostrando racimos cargados de açaí en el patio de la finca",
+      "produtor": "Productor sosteniendo dos racimos llenos de açaí maduro",
+      "visita": "Grupo de agricultores reunido en una visita a la plantación de açaí",
+      "equipe": "Equipo de técnicos agrícolas reunido en la finca"
+    },
+    "verFoto": "Ver foto {n}",
     "etapas": {
       "colheita": {
         "titulo": "Cosecha familiar",
@@ -95,18 +101,18 @@
       },
       "envase": {
         "titulo": "Envasado y envío",
-        "desc": "Una vez preparado, el producto se envasa cuidadosamente y viaja directamente desde la producción familiar hasta tu casa."
+        "desc": "Una vez preparado, el producto se envasa cuidadosamente y viaja directamente desde la producción familiar hasta tu negocio."
       }
     }
   },
   "depoimentos": {
     "eyebrow": "testimonios",
-    "titulo": "Quién ya lo vende",
+    "titulo": "Quien ya lo ha probado",
     "contagem": "3 testimonios",
     "um": {
-      "citacao": "Cita del socio en tres líneas, hablando del resultado obtenido con el producto.",
-      "nome": "Nombre del socio",
-      "papel": "cafetería · ciudad"
+      "citacao": "Es muy diferente y tiene muchos beneficios; lo estoy tomando en lugar de café por la cafeína. ¡Lo recomiendo!",
+      "nome": "Natalia Lopes",
+      "papel": "Madrid, España"
     },
     "dois": {
       "citacao": "Cita del socio en tres líneas, hablando del resultado obtenido con el producto.",
