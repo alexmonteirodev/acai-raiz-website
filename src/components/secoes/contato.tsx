@@ -38,7 +38,7 @@ export function Contato() {
           <h2 className="m-0 font-display text-[38px] leading-[1.02] tracking-[-0.035em] text-balance lg:text-[48px]">
             {t("titulo")}
           </h2>
-
+          <p> {t("subtitulo")}</p>
           <dl className="flex flex-col">
             {linhas.map(({ id, Icone, valor, href }) => (
               <div
