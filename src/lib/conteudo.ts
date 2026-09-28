@@ -13,6 +13,9 @@ import trio from "@/assets/produtos-trio.png";
 import fotoAcai from "@/assets/essencia-acai.jpg";
 import fotoCacau from "@/assets/essencia-cacau.jpg";
 import fotoCafe from "@/assets/essencia-cafe.jpg";
+import depoimentoDois from "@/assets/depoimentos/dois.png";
+import depoimentoTres from "@/assets/depoimentos/tres.png";
+import depoimentoUm from "@/assets/depoimentos/um.png";
 
 /**
  * Dados das seções que não são tradução.
@@ -71,8 +74,15 @@ export const ETAPAS = [
 /**
  * Depoimentos de parceiros. Ainda são o placeholder do design — quem escreve
  * o texto real troca em `messages/*.json`, no namespace `depoimentos.<id>`.
+ *
+ * `img` é o avatar com as iniciais de quem assina. É decorativo: o nome já
+ * está escrito ao lado.
  */
-export const DEPOIMENTOS = ["um", "dois", "tres"] as const;
+export const DEPOIMENTOS = [
+  { id: "um", img: depoimentoUm },
+  { id: "dois", img: depoimentoDois },
+  { id: "tres", img: depoimentoTres },
+] as const;
 
 /**
  * Grade do Instagram: 6 quadros. A legenda de cada um vem de

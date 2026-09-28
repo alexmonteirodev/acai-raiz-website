@@ -40,7 +40,7 @@
   "essencia": {
     "eyebrow": "Nuestra esencia",
     "titulo": "Natural por origen.<br></br>Innovador por naturaleza.",
-    "desc": "Transformamos ingredientes naturales en nuevas experiencias, con innovación, aprovechamiento integral y propósito en cada producto.",
+    "desc": "Ricos en compuestos bioactivos, el açaí, el café y el cacao combinan sabor y propiedades naturales que los convierten en ingredientes especiales. Llevamos este potencial a nuevos productos, poniendo en valor sus beneficios y aprovechando cada ingrediente de manera más consciente y sostenible.",
     "cafe": {
       "titulo": "CAFÉ",
       "desc": "Energía para empezar diferente.",
@@ -115,14 +115,14 @@
       "papel": "Madrid, España"
     },
     "dois": {
-      "citacao": "Cita del socio en tres líneas, hablando del resultado obtenido con el producto.",
-      "nome": "Nombre del socio",
-      "papel": "mercado · ciudad"
+      "citacao": "Se nota todo el respeto y cuidado que tienen por los frutos de la tierra. Me encantan sus productos y no puedo vivir sin ellos.",
+      "nome": "Marta Campos",
+      "papel": "Salvador, Brasil"
     },
     "tres": {
-      "citacao": "Cita del socio en tres líneas, hablando del resultado obtenido con el producto.",
-      "nome": "Nombre del socio",
-      "papel": "distribuidor · ciudad"
+      "citacao": "Mis clientes compran por curiosidad, para probar un producto totalmente diferente a lo que están acostumbrados.",
+      "nome": "Ricardo Gomes",
+      "papel": "Sergipe, Brasil"
     }
   },
   "instagram": {

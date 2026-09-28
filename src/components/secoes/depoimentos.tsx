@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import { Eyebrow, Faixa } from "@/components/eyebrow";
@@ -19,7 +20,7 @@ export function Depoimentos() {
         </div>
 
         <ul className="grid gap-4 md:grid-cols-3">
-          {DEPOIMENTOS.map((id) => (
+          {DEPOIMENTOS.map(({ id, img }) => (
             <li
               key={id}
               className="flex flex-col justify-between gap-6 rounded-[18px] border border-borda bg-creme-claro p-7"
@@ -28,7 +29,12 @@ export function Depoimentos() {
                 {t(`${id}.citacao`)}
               </blockquote>
               <div className="flex items-center gap-3">
-                <div className="size-10 shrink-0 rounded-full bg-[repeating-linear-gradient(45deg,oklch(0.7_0.03_60)_0_5px,oklch(0.76_0.03_60)_5px_10px)]" />
+                <Image
+                  src={img}
+                  alt=""
+                  sizes="40px"
+                  className="size-10 shrink-0 rounded-full"
+                />
                 <div className="flex flex-col">
                   <span className="text-sm font-semibold">
                     {t(`${id}.nome`)}

@@ -40,7 +40,7 @@
   "essencia": {
     "eyebrow": "Our essence",
     "titulo": "Natural by origin.<br></br>Innovative by nature.",
-    "desc": "We turn natural ingredients into new experiences, with innovation, whole-fruit use and purpose in every product.",
+    "desc": "Rich in bioactive compounds, açaí, coffee, and cocoa combine flavor with natural properties that make them special ingredients. We harness this potential in new products, highlighting their benefits and utilizing each ingredient in a more conscious and sustainable way.",
     "cafe": {
       "titulo": "COFFEE",
       "desc": "Energy to start the day differently.",
@@ -115,14 +115,14 @@
       "papel": "Madrid, Spain"
     },
     "dois": {
-      "citacao": "A partner quote in three lines, about the results they got with the product.",
-      "nome": "Partner name",
-      "papel": "grocery · city"
+      "citacao": "You can really see all the respect and care you have for the fruits of the land. I love your products and can't live without them.",
+      "nome": "Marta Campos",
+      "papel": "Salvador, Brazil"
     },
     "tres": {
-      "citacao": "A partner quote in three lines, about the results they got with the product.",
-      "nome": "Partner name",
-      "papel": "distributor · city"
+      "citacao": "My customers buy from curiosity, wanting to try a product that is completely different from what they're used to.",
+      "nome": "Ricardo Gomes",
+      "papel": "Sergipe, Brazil"
     }
   },
   "instagram": {
